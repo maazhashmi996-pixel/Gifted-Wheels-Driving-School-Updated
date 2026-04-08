@@ -1,11 +1,11 @@
 import Contacts from '@/components/Sections/Contact'
-import ContactPage from '@/components/Sections/Contact/ContactPages'
+import ContectPages from '@/components/Sections/Family/page'
 import React from 'react'
 
 function page() {
     return (
         <div>
-            <ContactPage />
+            <ContectPages />
             <Contacts />
         </div>
     )

@@ -9,10 +9,11 @@ import {
     MapPin,
     Mail,
     Phone,
-    MessageCircle
+    Shield
 } from 'lucide-react';
 
-const ContactPage = ({ children }: { children: React.ReactNode }) => {
+// Iska naam ContactPage rakha hai taakay aapka import error khatam ho jaye
+const ContactPage = ({ children }: { children?: React.ReactNode }) => {
     return (
         <section className="py-24 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
@@ -108,28 +109,26 @@ const ContactPage = ({ children }: { children: React.ReactNode }) => {
                         </div>
                     </div>
 
-                    {/* --- SECTION 3: RIGHT SIDE (YOUR FORM AREA) --- */}
+                    {/* --- SECTION 3: RIGHT SIDE (FORM AREA) --- */}
                     <div className="lg:col-span-7">
                         <div className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-slate-100 to-white shadow-2xl">
                             <div className="bg-white rounded-[3.2rem] p-8 md:p-12">
-                                {/* Form Title */}
                                 <div className="mb-10">
                                     <h3 className="text-3xl font-black text-slate-900 mb-2">Send a Message</h3>
                                     <p className="text-slate-500 font-medium italic">We typically respond within an hour.</p>
                                 </div>
 
-                                {/* Yahan aap apna <ContactForm /> component import kar ke laga den */}
                                 <div className="vip-form-wrapper">
+                                    {/* Agar page.tsx mein iske beech kuch likhoge toh yahan show hoga */}
                                     {children}
                                 </div>
-
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                {/* --- SECTION 4: AREA MAP HIGHLIGHT (VIP) --- */}
+                {/* --- SECTION 4: AREA MAP HIGHLIGHT --- */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +143,6 @@ const ContactPage = ({ children }: { children: React.ReactNode }) => {
                             <p className="text-slate-600 font-medium">Carrollton, Frisco, Plano, McKinney, Allen, and Little Elm.</p>
                         </div>
                     </div>
-
                 </motion.div>
 
             </div>
