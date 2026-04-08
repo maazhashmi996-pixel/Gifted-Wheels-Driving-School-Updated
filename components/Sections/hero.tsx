@@ -1,0 +1,161 @@
+"use client";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+
+const slides = [
+    {
+        id: 1,
+        title: "Confidence behind the wheel.",
+        description: "Gifted Wheels Driving School empowers you to drive with skill, safety, and confidence through expert female-led guidance.",
+        image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop",
+        accent: "Est. 2026"
+    },
+    {
+        id: 2,
+        title: "Expert Female Instructors.",
+        description: "Our licensed team brings 45 years of teaching expertise, helping nervous drivers become natural professionals.",
+        image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=2070&auto=format&fit=crop",
+        accent: "45 Years Experience"
+    },
+    {
+        id: 3,
+        title: "Master the Road Test.",
+        description: "Learn parallel parking and road safety in our dual-brake vehicles designed for your maximum security.",
+        image: "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?q=80&w=2059&auto=format&fit=crop",
+        accent: "Dual Brake Safety"
+    }
+];
+
+const Hero = () => {
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % slides.length);
+        }, 6000);
+        return () => clearInterval(timer);
+    }, []);
+
+    return (
+        <section className="relative w-full h-screen overflow-hidden bg-black">
+            {/* Background Slider */}
+            <div className="absolute inset-0 z-0">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={current}
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
+                        className="absolute inset-0"
+                    >
+                        <div
+                            className="relative w-full h-full bg-cover bg-center"
+                            style={{ backgroundImage: `url(${slides[current].image})` }}
+                        >
+                            {/* ✅ Black Overlay for VIP depth - pure cinematic look */}
+                            <div className="absolute inset-0 bg-black/50" />
+                        </div>
+                    </motion.div>
+                </AnimatePresence>
+            </div>
+
+            {/* Content Layer */}
+            <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
+                <div className="max-w-3xl">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={current}
+                            initial={{ y: 30, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -30, opacity: 0 }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        >
+                            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] text-blue-400 uppercase bg-blue-500/10 backdrop-blur-md rounded-full border border-blue-500/20">
+                                {slides[current].accent}
+                            </span>
+
+                            {/* ✅ Text changed to White (#ffffff) */}
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8">
+                                {slides[current].title.split(' ').map((word, i) => (
+                                    <span key={i} className={word === "wheel." || word === "Instructors." || word === "Test." ? "text-blue-500" : ""}>
+                                        {word}{" "}
+                                    </span>
+                                ))}
+                            </h1>
+
+                            <p className="text-lg md:text-xl text-gray-200 font-medium leading-relaxed mb-10 max-w-lg">
+                                {slides[current].description}
+                            </p>
+
+                            <div className="flex flex-wrap gap-5 items-center">
+                                <Link
+                                    href="/contact"
+                                    className="px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold shadow-[0_20px_40px_rgba(37,99,235,0.3)] hover:shadow-[0_25px_50px_rgba(37,99,235,0.5)] hover:-translate-y-1.5 active:scale-95 transition-all duration-300"
+                                >
+                                    Book Your Lesson
+                                </Link>
+
+                                <Link
+                                    href="/services"
+                                    className="group flex items-center gap-3 px-6 py-5 text-white font-bold text-lg hover:text-blue-400 transition-colors"
+                                >
+                                    Explore Services
+                                    <motion.span
+                                        animate={{ x: [0, 5, 0] }}
+                                        transition={{ repeat: Infinity, duration: 1.5 }}
+                                    >
+                                        →
+                                    </motion.span>
+                                </Link>
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </div>
+
+            {/* Modern Bottom Navigation / Indicators */}
+            <div className="absolute bottom-12 left-6 md:left-auto md:right-12 z-20 flex flex-col gap-6">
+                {slides.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => setCurrent(i)}
+                        className="group flex items-center gap-4 focus:outline-none"
+                    >
+                        <span className={`text-xs font-bold transition-colors duration-300 ${current === i ? "text-white" : "text-white/40"}`}>
+                            0{i + 1}
+                        </span>
+                        <div className="relative w-16 h-[2px] bg-white/20 overflow-hidden">
+                            <motion.div
+                                className="absolute inset-0 bg-blue-500"
+                                initial={{ x: "-100%" }}
+                                animate={{ x: current === i ? "0%" : "-100%" }}
+                                transition={{ duration: current === i ? 6 : 0.3, ease: "linear" }}
+                            />
+                        </div>
+                    </button>
+                ))}
+            </div>
+
+            {/* Floating Badge (Glassmorphism VIP Look) */}
+            <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-32 right-12 hidden lg:flex bg-white/10 backdrop-blur-xl border border-white/10 p-6 rounded-[2.5rem] shadow-2xl items-center gap-4 z-10"
+            >
+                <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-500/50">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <div>
+                    <p className="text-white font-bold leading-none">Safety First</p>
+                    <p className="text-white/60 text-sm mt-1">Dual-brake certified</p>
+                </div>
+            </motion.div>
+        </section>
+    );
+};
+
+export default Hero;
