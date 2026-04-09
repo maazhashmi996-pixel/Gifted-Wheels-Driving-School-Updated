@@ -1,10 +1,9 @@
 "use client";
 import React from 'react';
-import { motion, Variants } from 'framer-motion'; // Variants type yahan se aayegi
+import { motion, Variants } from 'framer-motion';
 import { ShieldCheck, Award, Users } from 'lucide-react';
 
 const AboutUs = () => {
-    // Types add kar di hain taakay red line na aaye
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -45,7 +44,7 @@ const AboutUs = () => {
                             <motion.img
                                 whileHover={{ scale: 1.05 }}
                                 src="/about.jpeg"
-                                alt="About"
+                                alt="About Gifted Wheels Driving School"
                                 className="w-full h-auto object-cover"
                             />
                         </div>
@@ -53,20 +52,25 @@ const AboutUs = () => {
 
                     {/* Right Side: Content */}
                     <motion.div
-                        variants={containerVariants} // Yahan red line nahi aayegi ab
+                        variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
+                        {/* Heading */}
                         <motion.div variants={itemVariants}>
                             <span className="text-blue-600 font-bold tracking-widest uppercase text-sm">Our Story</span>
                             <h2 className="text-5xl font-black text-slate-900 mt-5">About <span className="text-blue-600">Us</span></h2>
                         </motion.div>
 
+                        {/* Full Original Write-up */}
                         <motion.div variants={itemVariants} className="space-y-6">
                             <p className="text-lg text-slate-700 font-medium leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                                Welcome to **Gifted Wheels Driving School**, proudly owned and operated by women. Our team brings **45 years of teaching expertise**.
+                                Welcome to <strong>Gifted Wheels Driving School</strong>, proudly owned and operated by women. Our team of female licensed instructors bring a combined <strong>45 years of teaching expertise</strong>, and are dedicated to helping teens and adults from different backgrounds and skill levels succeed.
+                            </p>
+                            <p className="text-lg text-slate-700 font-medium leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                We understand that every learner has unique needs and learning styles, and we tailor our approach to ensure a comfortable and effective driving experience. Specializing in anxious, nervous drivers.
                             </p>
                             <p className="text-lg text-slate-600 font-medium">
                                 Serving Carrollton, Frisco, Plano, and surrounding areas with dual-brake safety.

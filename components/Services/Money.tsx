@@ -1,22 +1,20 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, Check, Zap, ArrowRight } from 'lucide-react';
+import { Clock, ArrowRight } from 'lucide-react';
 
 const Pricing = () => {
     const plans = [
         {
             title: "Quick Session",
-            duration: "1 Hour Lesson",
-            price: "60",
-            features: ["Basic Driving Skills", "Dual-Brake Vehicle", "Expert Guidance"],
+            duration: "1 hour lesson",
+            price: "55",
             recommended: false
         },
         {
             title: "Pro Session",
-            duration: "2 Hour Lesson",
+            duration: "2 hour lesson",
             price: "100",
-            features: ["Extended Practice Time", "Parallel Parking Focus", "Best Value for Money", "Confidence Building"],
             recommended: true
         }
     ];
@@ -51,8 +49,8 @@ const Pricing = () => {
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ y: -5 }}
                             className={`relative p-10 rounded-[3rem] border-2 transition-all duration-500 ${plan.recommended
-                                    ? "bg-slate-900 text-white border-slate-900 shadow-[0_30px_60px_-15px_rgba(15,23,42,0.3)]"
-                                    : "bg-white text-slate-900 border-slate-100 shadow-xl shadow-slate-200/50"
+                                ? "bg-slate-900 text-white border-slate-900 shadow-[0_30px_60px_-15px_rgba(15,23,42,0.3)]"
+                                : "bg-white text-slate-900 border-slate-100 shadow-xl shadow-slate-200/50"
                                 }`}
                         >
                             {plan.recommended && (
@@ -70,32 +68,23 @@ const Pricing = () => {
                                 </h3>
                             </div>
 
-                            <div className="mb-8">
-                                <div className="flex items-baseline gap-1">
+                            <div className="mb-10">
+                                <div className="flex items-baseline gap-2">
                                     <span className="text-5xl md:text-6xl font-black italic">$</span>
                                     <span className="text-6xl md:text-7xl font-black tracking-tighter">{plan.price}</span>
                                 </div>
-                                <p className={`font-bold mt-2 uppercase tracking-widest text-sm ${plan.recommended ? "text-slate-400" : "text-slate-500"}`}>
-                                    {plan.duration}
-                                </p>
-                            </div>
 
-                            <div className="space-y-4 mb-10">
-                                {plan.features.map((feat, i) => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <Check className={`w-5 h-5 ${plan.recommended ? "text-blue-400" : "text-blue-600"}`} />
-                                        <span className={`font-medium ${plan.recommended ? "text-slate-300" : "text-slate-600"}`}>
-                                            {feat}
-                                        </span>
-                                    </div>
-                                ))}
+                                {/* SIMPLE TEXT (Client Requirement) */}
+                                <p className={`font-bold mt-4 text-lg ${plan.recommended ? "text-slate-300" : "text-slate-600"}`}>
+                                    {plan.duration} ${plan.price}
+                                </p>
                             </div>
 
                             <a
                                 href="#contact"
                                 className={`w-full py-5 rounded-2xl font-black text-center flex items-center justify-center gap-3 transition-all duration-300 group ${plan.recommended
-                                        ? "bg-blue-600 hover:bg-blue-500 text-white"
-                                        : "bg-slate-900 hover:bg-blue-600 text-white"
+                                    ? "bg-blue-600 hover:bg-blue-500 text-white"
+                                    : "bg-slate-900 hover:bg-blue-600 text-white"
                                     }`}
                             >
                                 Book This Lesson

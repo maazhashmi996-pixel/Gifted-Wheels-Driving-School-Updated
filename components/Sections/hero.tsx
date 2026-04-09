@@ -8,21 +8,21 @@ const slides = [
         id: 1,
         title: "Confidence behind the wheel.",
         description: "Gifted Wheels Driving School empowers you to drive with skill, safety, and confidence through expert female-led guidance.",
-        image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop",
-        accent: "Est. 2026"
+        image: "B.jpeg",
+
     },
     {
         id: 2,
         title: "Expert Female Instructors.",
         description: "Our licensed team brings 45 years of teaching expertise, helping nervous drivers become natural professionals.",
-        image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=2070&auto=format&fit=crop",
+        image: "C.jpeg",
         accent: "45 Years Experience"
     },
     {
         id: 3,
-        title: "Master the Road Test.",
+        title: "Ready for Road Test.",
         description: "Learn parallel parking and road safety in our dual-brake vehicles designed for your maximum security.",
-        image: "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?q=80&w=2059&auto=format&fit=crop",
+        image: "A.jpeg",
         accent: "Dual Brake Safety"
     }
 ];
