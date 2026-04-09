@@ -18,7 +18,7 @@ const Services = () => {
         {
             title: "Online Classes for Teens & Adults",
             desc: "Flexible online classes designed to help teens and adults start their driving journey from the comfort of home.",
-            img: "/online-classes.jpg",
+            img: "/Online.png",
             icon: <GraduationCap className="w-5 h-5" />,
             link: "/services",
             status: "active"
