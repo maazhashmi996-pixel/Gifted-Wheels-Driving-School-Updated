@@ -16,8 +16,16 @@ const Services = () => {
 
     const services = [
         {
+            title: "Online Classes for Teens & Adults",
+            desc: "Flexible online classes designed to help teens and adults start their driving journey from the comfort of home.",
+            img: "/online-classes.jpg",
+            icon: <GraduationCap className="w-5 h-5" />,
+            link: "/services",
+            status: "active"
+        },
+        {
             title: "Driving Lessons: Adult & Teen",
-            desc: "Learn to drive with expert instructors in a safe, supportive environment for driving test prep.",
+            desc: "Learn to drive and build confidence in a safe, supportive environment, getting you ready for your road test.",
             img: "/Driving Lessons Adult and Teen.jpeg",
             icon: <GraduationCap className="w-5 h-5" />,
             link: "/services",
@@ -25,7 +33,7 @@ const Services = () => {
         },
         {
             title: "Driving Test Prep: Adult & Teen",
-            desc: "Comprehensive test preparation with expert instructors to ensure you pass with confidence.",
+            desc: "Prepare for your driving test with structured lessons and expert guidance to pass with confidence.",
             img: "/Driving Test Prep Adult and Teen.webp",
             icon: <ClipboardCheck className="w-5 h-5" />,
             link: "/services",
@@ -67,7 +75,6 @@ const Services = () => {
                 {/* Services Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {services.map((service, i) => {
-                        // Card Content as a reusable component
                         const CardContent = (
                             <motion.div
                                 custom={i}
@@ -119,12 +126,10 @@ const Services = () => {
                                     )}
                                 </div>
 
-                                {/* VIP Hover Border Effect */}
                                 <div className="absolute inset-0 border-[2px] border-transparent group-hover:border-blue-500/50 rounded-[3rem] transition-all duration-500 z-30 pointer-events-none" />
                             </motion.div>
                         );
 
-                        // Agar status upcoming hai tu Link nahi banega, warna poora card link hoga
                         return service.status === 'active' ? (
                             <Link key={i} href={service.link}>
                                 {CardContent}

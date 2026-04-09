@@ -8,7 +8,7 @@ const features = [
     {
         title: "Driving Lessons",
         subtitle: "Adult and Teen",
-        desc: "Comprehensive classes tailored for all skill levels. From basics to advanced road confidence, we cover it all.",
+        desc: "Comprehensive driving lessons tailored for all skill levels. We specialize in training nervous and anxious drivers, helping you build confidence for the road test.",
         icon: <Users className="w-6 h-6" />,
         colSpan: "md:col-span-2"
     },
@@ -22,14 +22,14 @@ const features = [
     {
         title: "Pick & Drop",
         subtitle: "Complimentary Service",
-        desc: "Free pick-up and drop-off within 20 mins of Carrollton. Convenience delivered to your doorstep at no extra charge.",
+        desc: "Free pick and drop available in Carrollton, Plano, Frisco, and The Colony. Call for charges for other areas.",
         icon: <MapPin className="w-6 h-6" />,
         colSpan: "md:col-span-1"
     },
     {
         title: "Flexible Sessions",
         subtitle: "1 or 2 Hour Classes",
-        desc: "Choose between 1-hour or 2-hour sessions. For locations 20-30 mins away, we offer dedicated 2-hour intensive classes.",
+        desc: "1-hour lessons available in Carrollton, Plano, Frisco, and The Colony. All other areas require 2-hour sessions if pick and drop is needed.",
         icon: <Clock className="w-6 h-6" />,
         colSpan: "md:col-span-2"
     }
@@ -100,7 +100,7 @@ const Features = () => {
                     <div className="max-w-xl text-center md:text-left">
                         <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready for your Road Test?</h3>
                         <p className="text-slate-400 font-medium italic">
-                            "Driving Lessons will prepare you for the road test which includes parallel parking."
+                            "Driving lessons designed to build confidence and fully prepare you for your road test, including parallel parking."
                         </p>
                     </div>
                     <Link

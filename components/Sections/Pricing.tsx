@@ -21,12 +21,12 @@ const Pricing = () => {
                     >
                         Simple & <span className="text-blue-600">Transparent</span> Pricing
                     </motion.h2>
-                    <p className="text-slate-500 font-medium">No hidden fees. Just expert training at the best rates.</p>
+                    <p className="text-slate-500 font-medium tracking-wide">Expert training at the best rates. No hidden charges.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-                    {/* 1 Hour Lesson */}
+                    {/* 1 Hour Lesson - Updated Price $55 */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -38,13 +38,14 @@ const Pricing = () => {
                             <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-500">
                                 <Clock className="w-6 h-6" />
                             </div>
-                            <span className="text-4xl font-black text-slate-900">$60</span>
+                            <span className="text-4xl font-black text-slate-900">$55</span>
                         </div>
 
                         <h3 className="text-2xl font-bold text-slate-900 mb-6">1 Hour Lesson</h3>
 
+                        {/* Cleaned up list as per client request */}
                         <ul className="space-y-4 mb-10">
-                            {["Focused Skill Training", "Dual Brake Safety", "Professional Evaluation"].map((item, i) => (
+                            {["Focused Skill Training", "Dual Brake Safety", "Professional Guidance"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-slate-600 font-medium">
                                     <CheckCircle2 className="w-5 h-5 text-blue-500" /> {item}
                                 </li>
@@ -52,7 +53,7 @@ const Pricing = () => {
                         </ul>
                     </motion.div>
 
-                    {/* 2 Hour Lesson (Featured/VIP) */}
+                    {/* 2 Hour Lesson - $100 */}
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -60,9 +61,8 @@ const Pricing = () => {
                         whileHover={{ y: -8 }}
                         className="bg-[#0f172a] p-10 rounded-[3rem] shadow-[0_40px_80px_rgba(15,23,42,0.25)] relative overflow-hidden group border border-slate-800"
                     >
-                        {/* VIP Tag */}
                         <div className="absolute top-6 right-8 bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1.5 rounded-full shadow-lg shadow-blue-500/20">
-                            Most Popular
+                            Best Value
                         </div>
 
                         <div className="flex justify-between items-start mb-8">
@@ -71,14 +71,14 @@ const Pricing = () => {
                             </div>
                             <div className="text-right">
                                 <span className="text-4xl font-black text-white">$100</span>
-                                <p className="text-blue-400 text-xs font-bold mt-1">SAVE $20</p>
+                                <p className="text-blue-400 text-xs font-bold mt-1">SAVE $10</p>
                             </div>
                         </div>
 
                         <h3 className="text-2xl font-bold text-white mb-6">2 Hour Lesson</h3>
 
                         <ul className="space-y-4 mb-10">
-                            {["Intensive Practice", "Parallel Parking Mastery", "Deep Road Confidence", "Extended Distance Pick-up"].map((item, i) => (
+                            {["Intensive Practice Session", "Deep Road Confidence", "Extended Distance Options"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-slate-300 font-medium">
                                     <CheckCircle2 className="w-5 h-5 text-blue-500" /> {item}
                                 </li>
@@ -108,7 +108,6 @@ const Pricing = () => {
                             →
                         </motion.span>
                     </Link>
-                    <p className="mt-6 text-slate-400 text-sm font-semibold uppercase tracking-widest">Secure Your Slot for 2026</p>
                 </motion.div>
 
             </div>

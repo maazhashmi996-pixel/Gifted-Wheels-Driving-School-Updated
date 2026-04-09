@@ -12,7 +12,6 @@ import {
     Shield
 } from 'lucide-react';
 
-// Iska naam ContactPage rakha hai taakay aapka import error khatam ho jaye
 const ContactPage = ({ children }: { children?: React.ReactNode }) => {
     return (
         <section className="py-24 bg-white overflow-hidden">
@@ -42,7 +41,7 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                         whileInView={{ opacity: 1 }}
                         className="text-slate-500 font-medium text-lg max-w-sm border-l-4 border-blue-100 pl-6 mb-2"
                     >
-                        Gifted Wheels empowers you to drive with skill, safety, and confidence. Our support team is active 24/7.
+                        Gifted Wheels empowers you to drive with skill, safety, and confidence.
                     </motion.p>
                 </div>
 
@@ -80,9 +79,8 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
 
                             <div className="space-y-6">
                                 {[
-                                    { title: "24/7 Availability", desc: "Our female-led team is available around the clock for booking inquiries." },
-                                    { title: "Fast Response", desc: "Average response time for all messages is under 30 minutes." },
-                                    { title: "Safety Protocol", desc: "All inquiries are handled with strict privacy and safety guidelines." }
+                                    { title: "Fast Response", desc: "Average response time for messages is within 1 hour." },
+                                    { title: "Safety Protocol", desc: "We follow strict safety guidelines to ensure a secure and comfortable learning experience." }
                                 ].map((point, i) => (
                                     <div key={i} className="flex gap-4">
                                         <div className="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0" />
@@ -119,7 +117,6 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                                 </div>
 
                                 <div className="vip-form-wrapper">
-                                    {/* Agar page.tsx mein iske beech kuch likhoge toh yahan show hoga */}
                                     {children}
                                 </div>
                             </div>
@@ -140,7 +137,7 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                         </div>
                         <div>
                             <h4 className="text-2xl font-black text-slate-900">Serving Local Communities</h4>
-                            <p className="text-slate-600 font-medium">Carrollton, Frisco, Plano, McKinney, Allen, and Little Elm.</p>
+                            <p className="text-slate-600 font-medium">Carrollton, Frisco, Plano, The Colony, McKinney, Allen, and Little Elm.</p>
                         </div>
                     </div>
                 </motion.div>

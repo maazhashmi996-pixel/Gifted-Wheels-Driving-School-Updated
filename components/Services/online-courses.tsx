@@ -96,7 +96,7 @@ const OnlineCourses = () => {
                 {/* Support Footer */}
                 <div className="mt-20 text-center p-12 rounded-[4rem] bg-slate-900 text-white relative overflow-hidden">
                     <div className="relative z-10">
-                        <h4 className="text-2xl font-black mb-4">Questions? We're Here to Help. [Carrollton, Lewisville,Colony, Plano, Frisco]</h4>
+                        <h4 className="text-2xl font-black mb-4">Questions? We're Here to Help. [Carrollton, Lewisville, Colony, Plano, Frisco]</h4>
                         <p className="text-slate-400 mb-8 font-medium italic">Please reach out if you have any questions. [Carrollton, Lewisville,Colony, Plano, Frisco]</p>
                         <div className="flex flex-col md:flex-row justify-center gap-10">
                             <div className="flex items-center justify-center gap-3">
