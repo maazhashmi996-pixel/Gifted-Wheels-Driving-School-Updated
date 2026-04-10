@@ -100,7 +100,6 @@ const Services = () => {
                                     </div>
                                 )}
 
-                                {/* Content Layer */}
                                 <div className="absolute inset-0 p-10 flex flex-col justify-end z-10">
                                     <div className="mb-6 w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg group-hover:rotate-[360deg] transition-transform duration-700">
                                         {service.icon}
