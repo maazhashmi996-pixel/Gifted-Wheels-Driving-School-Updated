@@ -94,7 +94,6 @@ const Services = () => {
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
                                 </div>
 
-                                {/* Status Badge */}
                                 {service.status === 'upcoming' && (
                                     <div className="absolute top-6 right-6 px-4 py-2 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 z-20">
                                         <Lock className="w-3 h-3" /> Coming Soon
