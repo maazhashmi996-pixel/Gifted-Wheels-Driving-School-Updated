@@ -72,7 +72,6 @@ const Services = () => {
                     </motion.h2>
                 </div>
 
-                {/* Services Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {services.map((service, i) => {
                         const CardContent = (
