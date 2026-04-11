@@ -107,7 +107,7 @@ const Footer = () => {
                 {/* Footer Bottom */}
                 <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
                     <p className="text-slate-500 text-sm font-medium order-2 md:order-1">
-                        © 2026 Gifted Wheels Driving. Designed by <span className="text-white hover:text-blue-500 transition-colors cursor-pointer">Maaz Hashmi</span>
+                        © 2026 Gifted Wheels Driving.
                     </p>
 
                     <div className="order-1 md:order-2">
@@ -115,11 +115,7 @@ const Footer = () => {
                             whileHover={{ scale: 1.1, rotate: 5 }}
                             className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center backdrop-blur-md border border-white/10 shadow-xl"
                         >
-                            <img
-                                src="/assets/WhatsApp_Image_2025-10-23_at_9.01.24_PM-removebg-preview.png"
-                                alt="Gifted Wheels Icon"
-                                className="w-12 h-12 object-contain grayscale brightness-200"
-                            />
+
                         </motion.div>
                     </div>
                 </div>

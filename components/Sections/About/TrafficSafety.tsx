@@ -24,9 +24,9 @@ const TrafficSafety = () => {
         {
             title: "Road Signs",
             desc: "From stop signs to speed limits and pedestrian crossings. We help learners recognize and respond to each sign with confidence and precision.",
-            icon: <Signpost className="w-8 h-8 text-blue-500" />,
-            bgColor: "bg-blue-50",
-            hoverBorder: "hover:border-blue-200"
+            icon: <Signpost className="w-8 h-8 text-yellow-500" />, // blue → yellow
+            bgColor: "bg-yellow-50", // blue → yellow
+            hoverBorder: "hover:border-yellow-200" // blue → yellow
         },
         {
             title: "Safety First",
@@ -39,8 +39,8 @@ const TrafficSafety = () => {
 
     return (
         <section className="py-24 bg-white relative overflow-hidden">
-            {/* Soft Background Accents */}
-            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50/50 blur-[100px] -z-10 rounded-full" />
+            {/* Background Accents */}
+            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-yellow-50/50 blur-[100px] -z-10 rounded-full" /> {/* blue → yellow */}
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-slate-50 blur-[100px] -z-10 rounded-full" />
 
             <div className="max-w-7xl mx-auto px-6">
@@ -52,8 +52,10 @@ const TrafficSafety = () => {
                         viewport={{ once: true }}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 mb-6"
                     >
-                        <Zap className="w-4 h-4 text-blue-600" />
-                        <span className="text-slate-600 text-xs font-bold uppercase tracking-widest">Life-Saving Knowledge</span>
+                        <Zap className="w-4 h-4 text-yellow-500" /> {/* blue → yellow */}
+                        <span className="text-slate-600 text-xs font-bold uppercase tracking-widest">
+                            confidence starts here
+                        </span>
                     </motion.div>
 
                     <motion.h2
@@ -62,7 +64,7 @@ const TrafficSafety = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight"
                     >
-                        Driving Knowledge & <span className="text-blue-600">Road Safety</span>
+                        Driving Knowledge & <span className="text-yellow-500">Road Safety</span> {/* blue → yellow */}
                     </motion.h2>
 
                     <motion.p
@@ -75,7 +77,7 @@ const TrafficSafety = () => {
                     </motion.p>
                 </div>
 
-                {/* Safety Cards Grid */}
+                {/* Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {safetyFeatures.map((feature, index) => (
                         <motion.div
@@ -87,12 +89,11 @@ const TrafficSafety = () => {
                             whileHover={{ y: -10 }}
                             className={`group relative p-10 rounded-[2.5rem] bg-white border border-slate-100 ${feature.hoverBorder} transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)]`}
                         >
-                            {/* Icon Circle */}
                             <div className={`w-16 h-16 rounded-2xl ${feature.bgColor} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
                                 {feature.icon}
                             </div>
 
-                            <h3 className="text-2xl font-bold text-slate-900 mb-4 transition-colors">
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">
                                 {feature.title}
                             </h3>
 
@@ -100,8 +101,8 @@ const TrafficSafety = () => {
                                 {feature.desc}
                             </p>
 
-                            {/* Decorative Line */}
-                            <div className="mt-8 w-12 h-1 bg-slate-100 rounded-full group-hover:w-20 group-hover:bg-blue-500 transition-all duration-500" />
+                            {/* line color blue → yellow */}
+                            <div className="mt-8 w-12 h-1 bg-slate-100 rounded-full group-hover:w-20 group-hover:bg-yellow-500 transition-all duration-500" />
                         </motion.div>
                     ))}
                 </div>

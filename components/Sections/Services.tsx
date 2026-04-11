@@ -58,17 +58,18 @@ const Services = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 mb-6"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-50 border border-yellow-100 text-slate-700 mb-6"
                     >
-                        <span className="animate-pulse"><Sparkles className="w-4 h-4" /></span>
+                        <span className="animate-pulse"><Sparkles className="w-4 h-4 text-yellow-600" /></span>
                         <span className="text-xs font-black uppercase tracking-widest">Our Expertise</span>
                     </motion.div>
+
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-6xl font-black text-slate-900"
                     >
-                        Professional <span className="text-blue-600">Services</span>
+                        Professional <span className="text-yellow-600">Services</span>
                     </motion.h2>
                 </div>
 
@@ -89,7 +90,10 @@ const Services = () => {
                                     <img
                                         src={service.img}
                                         alt={service.title}
-                                        className={`w-full h-full object-cover transition-all duration-700 ${service.status === 'upcoming' ? 'opacity-30 grayscale' : 'opacity-60 group-hover:opacity-100'}`}
+                                        className={`w-full h-full object-cover transition-all duration-700 ${service.status === 'upcoming'
+                                                ? 'opacity-30 grayscale'
+                                                : 'opacity-60 group-hover:opacity-100'
+                                            }`}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
                                 </div>
@@ -101,7 +105,7 @@ const Services = () => {
                                 )}
 
                                 <div className="absolute inset-0 p-10 flex flex-col justify-end z-10">
-                                    <div className="mb-6 w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg group-hover:rotate-[360deg] transition-transform duration-700">
+                                    <div className="mb-6 w-14 h-14 rounded-2xl bg-yellow-600 flex items-center justify-center text-white shadow-lg group-hover:rotate-[360deg] transition-transform duration-700">
                                         {service.icon}
                                     </div>
 
@@ -114,16 +118,16 @@ const Services = () => {
                                     </p>
 
                                     {service.status !== 'upcoming' && (
-                                        <div className="inline-flex items-center gap-3 text-blue-400 font-black uppercase tracking-widest text-sm group/btn">
+                                        <div className="inline-flex items-center gap-3 text-yellow-400 font-black uppercase tracking-widest text-sm group/btn">
                                             Explore Service
-                                            <div className="w-10 h-10 rounded-full border border-blue-400/30 flex items-center justify-center group-hover/btn:bg-blue-600 group-hover/btn:border-blue-600 transition-all">
+                                            <div className="w-10 h-10 rounded-full border border-yellow-400/30 flex items-center justify-center group-hover/btn:bg-yellow-600 group-hover/btn:border-yellow-600 transition-all">
                                                 <ArrowRight className="w-5 h-5 text-white" />
                                             </div>
                                         </div>
                                     )}
                                 </div>
 
-                                <div className="absolute inset-0 border-[2px] border-transparent group-hover:border-blue-500/50 rounded-[3rem] transition-all duration-500 z-30 pointer-events-none" />
+                                <div className="absolute inset-0 border-[2px] border-transparent group-hover:border-yellow-500/50 rounded-[3rem] transition-all duration-500 z-30 pointer-events-none" />
                             </motion.div>
                         );
 

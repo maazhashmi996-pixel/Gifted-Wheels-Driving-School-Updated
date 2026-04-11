@@ -17,13 +17,13 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
         <section className="py-24 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* --- SECTION 1: VIP HEADER --- */}
+                {/* HEADER */}
                 <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
                     <div className="max-w-2xl">
                         <motion.span
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="text-blue-600 font-black uppercase tracking-[0.3em] text-sm"
+                            className="text-yellow-500 font-black uppercase tracking-[0.3em] text-sm"
                         >
                             Contact Center
                         </motion.span>
@@ -33,13 +33,13 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                             className="text-5xl md:text-7xl font-black text-slate-900 mt-4 leading-tight"
                         >
                             Always Here <br />
-                            <span className="text-blue-600">When You Need Us.</span>
+                            <span className="text-yellow-500">When You Need Us.</span>
                         </motion.h1>
                     </div>
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        className="text-slate-500 font-medium text-lg max-w-sm border-l-4 border-blue-100 pl-6 mb-2"
+                        className="text-slate-500 font-medium text-lg max-w-sm border-l-4 border-yellow-100 pl-6 mb-2"
                     >
                         Gifted Wheels empowers you to drive with skill, safety, and confidence.
                     </motion.p>
@@ -47,17 +47,17 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
-                    {/* --- SECTION 2: LEFT SIDE (INFO & GUIDELINES) --- */}
+                    {/* LEFT SIDE */}
                     <div className="lg:col-span-5 space-y-12">
 
-                        {/* Quick Contact Cards */}
+                        {/* Contact Cards */}
                         <div className="grid grid-cols-1 gap-4">
                             {[
-                                { icon: <Phone />, label: "Direct Line", val: "972-632-8113", color: "blue" },
-                                { icon: <Mail />, label: "Support Email", val: "giftedwheels@gmail.com", color: "indigo" },
+                                { icon: <Phone />, label: "Direct Line", val: "972-632-8113" },
+                                { icon: <Mail />, label: "Support Email", val: "giftedwheels@gmail.com" },
                             ].map((item, i) => (
                                 <div key={i} className="p-6 rounded-[2rem] bg-slate-50 border border-slate-100 flex items-center gap-6 group hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500">
-                                    <div className={`w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-blue-600 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-colors`}>
+                                    <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-yellow-500 shadow-sm group-hover:bg-yellow-500 group-hover:text-white transition-colors">
                                         {item.icon}
                                     </div>
                                     <div>
@@ -68,12 +68,12 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                             ))}
                         </div>
 
-                        {/* VIP Guidelines / Support Module */}
+                        {/* Support Module */}
                         <div className="bg-slate-900 rounded-[3rem] p-10 text-white relative overflow-hidden group">
                             <Zap className="absolute -right-4 -top-4 w-32 h-32 text-white/5 -rotate-12" />
 
                             <h3 className="text-2xl font-black mb-8 flex items-center gap-3">
-                                <Headphones className="text-blue-400" />
+                                <Headphones className="text-yellow-400" />
                                 Support Guidelines
                             </h3>
 
@@ -83,9 +83,9 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                                     { title: "Safety Protocol", desc: "We follow strict safety guidelines to ensure a secure and comfortable learning experience." }
                                 ].map((point, i) => (
                                     <div key={i} className="flex gap-4">
-                                        <div className="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0" />
+                                        <div className="mt-1.5 w-2 h-2 rounded-full bg-yellow-500 shrink-0" />
                                         <div>
-                                            <h4 className="font-bold text-blue-100">{point.title}</h4>
+                                            <h4 className="font-bold text-yellow-100">{point.title}</h4>
                                             <p className="text-slate-400 text-sm leading-relaxed">{point.desc}</p>
                                         </div>
                                     </div>
@@ -101,13 +101,13 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                                     </p>
                                 </div>
                                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center">
-                                    <ShieldCheck className="text-blue-400 w-6 h-6" />
+                                    <ShieldCheck className="text-yellow-400 w-6 h-6" />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* --- SECTION 3: RIGHT SIDE (FORM AREA) --- */}
+                    {/* RIGHT SIDE */}
                     <div className="lg:col-span-7">
                         <div className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-slate-100 to-white shadow-2xl">
                             <div className="bg-white rounded-[3.2rem] p-8 md:p-12">
@@ -125,14 +125,14 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
 
                 </div>
 
-                {/* --- SECTION 4: AREA MAP HIGHLIGHT --- */}
+                {/* AREA SECTION */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="mt-20 p-8 rounded-[3rem] bg-blue-50/50 border border-blue-100 flex flex-col md:flex-row items-center justify-between gap-8"
+                    className="mt-20 p-8 rounded-[3rem] bg-yellow-50/50 border border-yellow-100 flex flex-col md:flex-row items-center justify-between gap-8"
                 >
                     <div className="flex items-center gap-6">
-                        <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0">
+                        <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-yellow-500 shrink-0">
                             <MapPin className="w-8 h-8" />
                         </div>
                         <div>
