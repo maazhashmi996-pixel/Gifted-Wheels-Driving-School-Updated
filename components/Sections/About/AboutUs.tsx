@@ -39,7 +39,8 @@ const AboutUs = () => {
                         transition={{ duration: 0.8 }}
                         className="relative group"
                     >
-                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-50 rounded-full blur-3xl" />
+                        {/* blue → yellow */}
+                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-50 rounded-full blur-3xl" />
                         <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
                             <motion.img
                                 whileHover={{ scale: 1.05 }}
@@ -60,11 +61,14 @@ const AboutUs = () => {
                     >
                         {/* Heading */}
                         <motion.div variants={itemVariants}>
-                            <span className="text-blue-600 font-bold tracking-widest uppercase text-sm">Our Story</span>
-                            <h2 className="text-5xl font-black text-slate-900 mt-5">About <span className="text-blue-600">Us</span></h2>
+                            {/* blue → yellow */}
+                            <span className="text-yellow-500 font-bold tracking-widest uppercase text-sm">Our Story</span>
+                            <h2 className="text-5xl font-black text-slate-900 mt-5">
+                                About <span className="text-yellow-500">Us</span>
+                            </h2>
                         </motion.div>
 
-                        {/* Full Original Write-up */}
+                        {/* Content */}
                         <motion.div variants={itemVariants} className="space-y-6">
                             <p className="text-lg text-slate-700 font-medium leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
                                 Welcome to <strong>Gifted Wheels Driving School</strong>, proudly owned and operated by women. Our team of female licensed instructors bring a combined <strong>45 years of teaching expertise</strong>, and are dedicated to helping teens and adults from different backgrounds and skill levels succeed.
@@ -84,8 +88,9 @@ const AboutUs = () => {
                                 { icon: <ShieldCheck />, title: "Dual Brake", sub: "Safety" },
                                 { icon: <Award />, title: "Female Led", sub: "Expertise" },
                             ].map((pillar, i) => (
-                                <div key={i} className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:border-blue-100 transition-colors">
-                                    <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-3">
+                                <div key={i} className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:border-yellow-100 transition-colors">
+                                    {/* blue → yellow */}
+                                    <div className="w-10 h-10 bg-yellow-50 text-yellow-500 rounded-lg flex items-center justify-center mb-3">
                                         {pillar.icon}
                                     </div>
                                     <h4 className="font-bold text-slate-900">{pillar.title}</h4>

@@ -7,13 +7,13 @@ const Contacts = () => {
     return (
         <section id="contact" className="relative py-24 bg-white overflow-hidden">
             {/* Background Decorative Shapes */}
-            <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-50 rounded-full blur-3xl -z-10 opacity-60" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-50 rounded-full blur-3xl -z-10 opacity-60" />
+            <div className="absolute top-0 left-1/4 w-72 h-72 bg-yellow-100 rounded-full blur-3xl -z-10 opacity-60" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-slate-100 rounded-full blur-3xl -z-10 opacity-60" />
 
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                    {/* Left Side: Contact Info */}
+                    {/* Left Side */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -22,7 +22,7 @@ const Contacts = () => {
                     >
                         <div>
                             <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">
-                                Get in <span className="text-blue-600">Touch</span>
+                                Get in <span className="text-yellow-500">Touch</span>
                             </h2>
                             <p className="text-lg text-slate-600 font-medium max-w-md leading-relaxed">
                                 Ready to start your journey? Send us a message and our team will get back to you within 24 hours.
@@ -36,7 +36,7 @@ const Contacts = () => {
                                 { icon: <MapPin className="w-5 h-5" />, label: "Location", val: "Carrollton, Texas" },
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 group">
-                                    <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                                    <div className="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center group-hover:bg-yellow-500 group-hover:text-white transition-all duration-300 shadow-sm">
                                         {item.icon}
                                     </div>
                                     <div>
@@ -48,7 +48,7 @@ const Contacts = () => {
                         </div>
                     </motion.div>
 
-                    {/* Right Side: VIP Contact Form */}
+                    {/* Right Side */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -57,62 +57,47 @@ const Contacts = () => {
                     >
                         <form id="contactForm" className="space-y-5">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <div className="space-y-2">
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        placeholder="Your Name"
-                                        required
-                                        className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium text-slate-900 placeholder:text-slate-400"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        placeholder="Your Email"
-                                        required
-                                        className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium text-slate-900 placeholder:text-slate-400"
-                                    />
-                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="Your Name"
+                                    required
+                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium"
+                                />
+                                <input
+                                    type="email"
+                                    placeholder="Your Email"
+                                    required
+                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium"
+                                />
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <div className="space-y-2">
-                                    <input
-                                        type="text"
-                                        id="location"
-                                        placeholder="Your Location"
-                                        required
-                                        className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium text-slate-900 placeholder:text-slate-400"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        placeholder="Telephone Number"
-                                        required
-                                        className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium text-slate-900 placeholder:text-slate-400"
-                                    />
-                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="Your Location"
+                                    required
+                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium"
+                                />
+                                <input
+                                    type="tel"
+                                    placeholder="Telephone Number"
+                                    required
+                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium"
+                                />
                             </div>
 
-                            <div className="space-y-2">
-                                <textarea
-                                    id="message"
-                                    rows={4}
-                                    placeholder="Your Message"
-                                    required
-                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium text-slate-900 placeholder:text-slate-400 resize-none"
-                                ></textarea>
-                            </div>
+                            <textarea
+                                rows={4}
+                                placeholder="Your Message"
+                                required
+                                className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium resize-none"
+                            ></textarea>
 
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 type="submit"
-                                className="w-full py-5 bg-blue-600 text-white rounded-2xl font-black text-lg shadow-[0_20px_40px_rgba(37,99,235,0.2)] hover:shadow-[0_25px_50px_rgba(37,99,235,0.4)] transition-all flex items-center justify-center gap-3"
+                                className="w-full py-5 bg-yellow-500 text-white rounded-2xl font-black text-lg shadow-[0_20px_40px_rgba(234,179,8,0.3)] hover:shadow-[0_25px_50px_rgba(234,179,8,0.5)] transition-all flex items-center justify-center gap-3"
                             >
                                 Send Message <Send className="w-5 h-5" />
                             </motion.button>
