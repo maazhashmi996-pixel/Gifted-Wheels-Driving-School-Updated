@@ -20,7 +20,7 @@ const Contacts = () => {
                 alert("✅ Message sent successfully! Check your Gmail inbox.");
                 form.reset();
             })
-            .catch((error) => {
+            .catch((error: any) => {
                 alert("❌ Failed to send message. Please try again.\nError: " + JSON.stringify(error));
             });
     };
