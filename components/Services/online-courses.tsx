@@ -6,7 +6,7 @@ import { BookOpen, ExternalLink, GraduationCap, Car, FileCheck, Mail, Phone } fr
 const OnlineCourses = () => {
     const data = [
         {
-            title: "Teens (16-18 years old)",
+            title: "Teens (15-18 years old)",
             icon: <GraduationCap className="w-6 h-6" />,
             links: [
                 { label: "Instructor Led (AMI)", url: "http://go.aceable.com/aff_c?offer_id=14&aff_id=2690" },
