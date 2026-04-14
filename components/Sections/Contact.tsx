@@ -1,9 +1,30 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Phone, Mail, MapPin } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contacts = () => {
+
+    useEffect(() => {
+        emailjs.init("dJy5lcU5bQFdS0xEb"); // ✅ Public Key
+    }, []);
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const form = e.currentTarget;
+
+        emailjs.sendForm("service_nu2j1lj", "template_np72a7t", form)
+            .then(() => {
+                alert("✅ Message sent successfully! Check your Gmail inbox.");
+                form.reset();
+            })
+            .catch((error) => {
+                alert("❌ Failed to send message. Please try again.\nError: " + JSON.stringify(error));
+            });
+    };
+
     return (
         <section id="contact" className="relative py-24 bg-white overflow-hidden">
             {/* Background Decorative Shapes */}
@@ -55,42 +76,47 @@ const Contacts = () => {
                         viewport={{ once: true }}
                         className="bg-white p-8 md:p-12 rounded-[3rem] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] border border-slate-100 relative"
                     >
-                        <form id="contactForm" className="space-y-5">
+                        <form id="contactForm" onSubmit={handleSubmit} className="space-y-5">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <input
                                     type="text"
+                                    name="user_name"
                                     placeholder="Your Name"
                                     required
-                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium"
+                                    className="w-full px-6 py-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium placeholder:text-slate-400"
                                 />
                                 <input
                                     type="email"
+                                    name="user_email"
                                     placeholder="Your Email"
                                     required
-                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium"
+                                    className="w-full px-6 py-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium placeholder:text-slate-400"
                                 />
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <input
                                     type="text"
+                                    name="location"
                                     placeholder="Your Location"
                                     required
-                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium"
+                                    className="w-full px-6 py-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium placeholder:text-slate-400"
                                 />
                                 <input
                                     type="tel"
+                                    name="phone"
                                     placeholder="Telephone Number"
                                     required
-                                    className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium"
+                                    className="w-full px-6 py-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium placeholder:text-slate-400"
                                 />
                             </div>
 
                             <textarea
                                 rows={4}
+                                name="message"
                                 placeholder="Your Message"
                                 required
-                                className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium resize-none"
+                                className="w-full px-6 py-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium resize-none placeholder:text-slate-400"
                             ></textarea>
 
                             <motion.button
