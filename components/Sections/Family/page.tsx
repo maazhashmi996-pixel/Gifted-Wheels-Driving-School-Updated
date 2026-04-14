@@ -54,7 +54,7 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                         <div className="grid grid-cols-1 gap-4">
                             {[
                                 { icon: <Phone />, label: "Direct Line", val: "972-632-8113" },
-                                { icon: <Mail />, label: "Support Email", val: "giftedwheels@gmail.com" },
+                                { icon: <Mail />, label: "Support Email", val: "giftedwheelsdriving@gmail.com" },
                             ].map((item, i) => (
                                 <div key={i} className="p-6 rounded-[2rem] bg-slate-50 border border-slate-100 flex items-center gap-6 group hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500">
                                     <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-yellow-500 shadow-sm group-hover:bg-yellow-500 group-hover:text-white transition-colors">
