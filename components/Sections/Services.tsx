@@ -39,14 +39,7 @@ const Services = () => {
             link: "/services",
             status: "active"
         },
-        {
-            title: "Classroom Courses (Coming Soon)",
-            desc: "Advanced online and in-classroom theory courses tailored for modern driving standards.",
-            img: "/Online and In classroom Courses Adult and Teen(Coming Soon).webp",
-            icon: <Lock className="w-5 h-5" />,
-            link: "#",
-            status: "upcoming"
-        }
+
     ];
 
     return (
@@ -91,8 +84,8 @@ const Services = () => {
                                         src={service.img}
                                         alt={service.title}
                                         className={`w-full h-full object-cover transition-all duration-700 ${service.status === 'upcoming'
-                                                ? 'opacity-30 grayscale'
-                                                : 'opacity-60 group-hover:opacity-100'
+                                            ? 'opacity-30 grayscale'
+                                            : 'opacity-60 group-hover:opacity-100'
                                             }`}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />

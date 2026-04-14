@@ -30,8 +30,8 @@ const RoadTest = () => {
             badge: "Contact for Pricing"
         },
         {
-            title: "Parallel Parking",
-            desc: "Confidence Starts Here of parallel parking with simple, repeatable techniques designed to help you pass with zero stress.",
+            title: "Driving Skills",
+            desc: "Learn rules, signs, signals and parallel parking, becoming confident drivers ready for the road in our dual brake vehicles.",
             icon: <ParkingCircle className="w-8 h-8" />,
             color: "text-slate-700",
             bgColor: "bg-slate-100"
