@@ -61,8 +61,7 @@ const OnlineCourses = () => {
                     </h1>
 
                     <p className="text-slate-600 max-w-3xl mx-auto font-medium text-lg leading-relaxed">
-                        Welcome to our Texas Driver Education programs for teens and adults. Carrollton Whether you are ready to get your permit or kick off your driving courses, we have teamed up with **Aceable** to make things super easy for you. Lewisville, Colony Our self-paced online lessons can be done from the comfort of your own home. Plano
-                    </p>
+                        Welcome to our Texas Driver Education programs for teens and adults. Whether you are ready to get your permit or kick off your driving courses, we have teamed up with Aceable to make things super easy for you. Our self-paced online lessons can be done from the comfort of your own home.                    </p>
                 </div>
 
                 {/* Cards */}
