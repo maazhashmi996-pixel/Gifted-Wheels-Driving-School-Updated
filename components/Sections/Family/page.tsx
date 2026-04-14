@@ -8,8 +8,7 @@ import {
     Headphones,
     MapPin,
     Mail,
-    Phone,
-    Shield
+    Phone
 } from 'lucide-react';
 
 const ContactPage = ({ children }: { children?: React.ReactNode }) => {
@@ -36,6 +35,7 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                             <span className="text-yellow-500">When You Need Us.</span>
                         </motion.h1>
                     </div>
+
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -91,36 +91,31 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                                     </div>
                                 ))}
                             </div>
-
-                            <div className="mt-10 pt-8 border-t border-white/10 flex items-center justify-between">
-                                <div>
-                                    <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Global Status</p>
-                                    <p className="text-sm font-bold text-emerald-400 flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                                        Systems Operational
-                                    </p>
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center">
-                                    <ShieldCheck className="text-yellow-400 w-6 h-6" />
-                                </div>
-                            </div>
                         </div>
                     </div>
 
                     {/* RIGHT SIDE */}
                     <div className="lg:col-span-7">
-                        <div className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-slate-100 to-white shadow-2xl">
+
+                        {/* ✅ CLICKABLE WRAPPER ADDED ONLY HERE */}
+                        <a
+                            href="tel:9726328113"
+                            className="block relative p-1 rounded-[3.5rem] bg-gradient-to-b from-slate-100 to-white shadow-2xl cursor-pointer"
+                        >
                             <div className="bg-white rounded-[3.2rem] p-8 md:p-12">
                                 <div className="mb-10">
                                     <h3 className="text-3xl font-black text-slate-900 mb-2">Send a Message</h3>
-                                    <p className="text-slate-500 font-medium italic">We typically respond within an hour.</p>
+                                    <p className="text-slate-500 font-medium italic">
+                                        We typically respond within an hour.
+                                    </p>
                                 </div>
 
                                 <div className="vip-form-wrapper">
                                     {children}
                                 </div>
                             </div>
-                        </div>
+                        </a>
+
                     </div>
 
                 </div>
@@ -137,7 +132,9 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
                         </div>
                         <div>
                             <h4 className="text-2xl font-black text-slate-900">Serving Local Communities</h4>
-                            <p className="text-slate-600 font-medium">Carrollton, Frisco, Plano, The Colony, McKinney, Allen, and Little Elm.</p>
+                            <p className="text-slate-600 font-medium">
+                                Carrollton, Frisco, Plano, The Colony, McKinney, Allen, and Little Elm.
+                            </p>
                         </div>
                     </div>
                 </motion.div>

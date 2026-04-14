@@ -81,7 +81,14 @@ const Contacts = () => {
                                 <input
                                     type="text"
                                     name="user_name"
-                                    placeholder="Your Name"
+                                    placeholder="First Name"
+                                    required
+                                    className="w-full px-6 py-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium placeholder:text-slate-400"
+                                />
+                                <input
+                                    type="text"
+                                    name="user_name"
+                                    placeholder="Last Name"
                                     required
                                     className="w-full px-6 py-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium placeholder:text-slate-400"
                                 />
@@ -95,18 +102,12 @@ const Contacts = () => {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <input
-                                    type="text"
-                                    name="location"
-                                    placeholder="Your Location"
-                                    required
-                                    className="w-full px-6 py-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium placeholder:text-slate-400"
-                                />
+
                                 <input
                                     type="tel"
                                     name="phone"
                                     placeholder="Telephone Number"
-                                    required
+
                                     className="w-full px-6 py-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-yellow-400/30 focus:border-yellow-400 transition-all font-medium placeholder:text-slate-400"
                                 />
                             </div>
