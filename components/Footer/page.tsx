@@ -23,7 +23,6 @@ const Footer = () => {
               guidance for a safer and more confident driving experience.
             </p>
             <div className="flex gap-4">
-              {/* Manual Facebook SVG */}
               <a
                 href="https://www.facebook.com/profile.php?id=61580819650511"
                 target="_blank"
