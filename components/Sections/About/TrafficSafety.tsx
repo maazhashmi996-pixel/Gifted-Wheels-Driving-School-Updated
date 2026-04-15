@@ -25,7 +25,7 @@ const TrafficSafety = () => {
       title: "Road Signs",
       desc: "From stop signs to speed limits and pedestrian crossings. We help learners recognize and respond to each sign with confidence and precision.",
       icon: <Signpost className="w-8 h-8 text-yellow-500" />,
-      bgColor: "bg-yellow-50", // blue → yellow
+      bgColor: "bg-yellow-50",
       hoverBorder: "hover:border-yellow-200", // blue → yellow
     },
     {
