@@ -48,8 +48,6 @@ const AboutUs = () => {
               />
             </div>
           </motion.div>
-
-          {/* Right Side: Content */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
