@@ -61,7 +61,6 @@ const Features = () => {
           </motion.h2>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <motion.div
