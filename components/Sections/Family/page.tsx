@@ -45,7 +45,6 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          {/* LEFT SIDE */}
           <div className="lg:col-span-5 space-y-12">
             {/* Contact Cards */}
             <div className="grid grid-cols-1 gap-4">
