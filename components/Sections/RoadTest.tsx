@@ -80,7 +80,6 @@ const RoadTest = () => {
               whileHover={{ scale: 1.03 }}
               className="bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 hover:border-yellow-200 transition-all duration-300 flex flex-col items-center text-center"
             >
-              {/* Icon Container */}
               <div
                 className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center text-slate-700 mb-8 shadow-inner transition-transform duration-500`}
               >
