@@ -39,7 +39,6 @@ const RoadTest = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-200/40 rounded-full blur-3xl -ml-48 -mb-48" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <motion.span
             initial={{ opacity: 0 }}
@@ -70,7 +69,6 @@ const RoadTest = () => {
           </motion.p>
         </div>
 
-        {/* Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {roadTestData.map((item, index) => (
             <motion.div
