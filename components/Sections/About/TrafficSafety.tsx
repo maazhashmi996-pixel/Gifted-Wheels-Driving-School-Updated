@@ -39,7 +39,6 @@ const TrafficSafety = () => {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      {/* Background Accents */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-yellow-50/50 blur-[100px] -z-10 rounded-full" />{" "}
       {/* blue → yellow */}
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-slate-50 blur-[100px] -z-10 rounded-full" />
