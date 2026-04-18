@@ -30,7 +30,6 @@ const Pricing = () => {
       </div>
 
       <div className="max-w-5xl mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6">
             Simple & <span className="text-slate-700">Transparent</span> Pricing
