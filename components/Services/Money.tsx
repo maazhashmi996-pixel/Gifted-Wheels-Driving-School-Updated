@@ -39,7 +39,6 @@ const Pricing = () => {
           </p>
         </div>
 
-        {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {plans.map((plan, index) => (
             <motion.div
