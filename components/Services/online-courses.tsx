@@ -109,7 +109,6 @@ const OnlineCourses = () => {
           </p>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {data.map((box, i) => (
             <motion.div
