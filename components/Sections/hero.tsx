@@ -62,7 +62,6 @@ const Hero = () => {
         </AnimatePresence>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
         <div className="max-w-3xl">
           <AnimatePresence mode="wait">
@@ -107,7 +106,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Indicators */}
       <div className="absolute bottom-12 left-6 md:left-auto md:right-12 z-20 flex flex-col gap-6">
         {slides.map((_, i) => (
           <button
@@ -136,7 +134,6 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Floating Badge */}
       <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

@@ -24,8 +24,6 @@ export default function Navbar() {
             className="h-16 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
-
-        {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-8 lg:space-x-10 font-bold text-white/90">
           {navLinks.map((item) => (
             <li key={item.name}>
