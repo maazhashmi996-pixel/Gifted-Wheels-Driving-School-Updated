@@ -55,9 +55,7 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Heading */}
             <motion.div variants={itemVariants}>
-              {/* blue → yellow */}
               <span className="text-yellow-500 font-bold tracking-widest uppercase text-sm">
                 Our Story
               </span>
@@ -66,7 +64,6 @@ const AboutUs = () => {
               </h2>
             </motion.div>
 
-            {/* Content */}
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-slate-700 font-medium leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
                 Welcome to <strong>Gifted Wheels Driving School</strong>,
@@ -88,7 +85,6 @@ const AboutUs = () => {
               </p>
             </motion.div>
 
-            {/* Icons Grid */}
             <motion.div
               variants={itemVariants}
               className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-6"
@@ -102,7 +98,6 @@ const AboutUs = () => {
                   key={i}
                   className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:border-yellow-100 transition-colors"
                 >
-                  {/* blue → yellow */}
                   <div className="w-10 h-10 bg-yellow-50 text-yellow-500 rounded-lg flex items-center justify-center mb-3">
                     {pillar.icon}
                   </div>

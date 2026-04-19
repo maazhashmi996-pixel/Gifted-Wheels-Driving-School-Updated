@@ -27,7 +27,6 @@ const Pricing = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* 1 Hour Lesson */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -63,7 +62,6 @@ const Pricing = () => {
             </ul>
           </motion.div>
 
-          {/* 2 Hour Lesson */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -109,7 +107,6 @@ const Pricing = () => {
           </motion.div>
         </div>
 
-        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
