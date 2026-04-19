@@ -40,7 +40,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
         <div className="hidden md:block">
           <Link
             href="/contact"
@@ -50,7 +49,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           className="md:hidden text-white p-2"
           onClick={() => setIsOpen(!isOpen)}
@@ -59,7 +57,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
