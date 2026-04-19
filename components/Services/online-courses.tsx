@@ -143,7 +143,6 @@ const OnlineCourses = () => {
           ))}
         </div>
 
-        {/* Footer */}
         <div className="mt-20 text-center p-12 rounded-[4rem] bg-slate-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-amber-500/10" />
 
