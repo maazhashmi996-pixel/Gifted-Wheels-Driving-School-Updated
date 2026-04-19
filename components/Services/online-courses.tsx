@@ -87,7 +87,6 @@ const OnlineCourses = () => {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-300 rounded-full blur-3xl opacity-30" />
 
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-20">
           <motion.span
             initial={{ opacity: 0 }}
