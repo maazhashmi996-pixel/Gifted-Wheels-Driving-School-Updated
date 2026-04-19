@@ -42,7 +42,6 @@ const TrafficSafety = () => {
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-yellow-50/50 blur-[100px] -z-10 rounded-full" />{" "}
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-slate-50 blur-[100px] -z-10 rounded-full" />
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -64,7 +63,6 @@ const TrafficSafety = () => {
           >
             Driving Knowledge &{" "}
             <span className="text-yellow-500">Road Safety</span>{" "}
-            {/* blue → yellow */}
           </motion.h2>
 
           <motion.p
@@ -78,7 +76,6 @@ const TrafficSafety = () => {
           </motion.p>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {safetyFeatures.map((feature, index) => (
             <motion.div
@@ -104,7 +101,6 @@ const TrafficSafety = () => {
                 {feature.desc}
               </p>
 
-              {/* line color blue → yellow */}
               <div className="mt-8 w-12 h-1 bg-slate-100 rounded-full group-hover:w-20 group-hover:bg-yellow-500 transition-all duration-500" />
             </motion.div>
           ))}
