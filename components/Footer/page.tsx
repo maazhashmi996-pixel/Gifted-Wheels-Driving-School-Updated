@@ -57,7 +57,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
           <div className="lg:pl-10">
             <h3 className="text-lg font-bold mb-6">Quick Navigation</h3>
             <ul className="space-y-4">
@@ -79,7 +78,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Contact Details */}
           <div>
             <h3 className="text-lg font-bold mb-6">Contact Info</h3>
             <div className="space-y-5">
@@ -106,11 +104,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 4: Location Map */}
           <div>
             <h3 className="text-lg font-bold mb-6">Our Location</h3>
             <div className="rounded-2xl overflow-hidden border border-white/5 grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl">
-              {/* Updated Map Link for Accuracy */}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107141.05608889423!2d-96.9634710178494!3d33.01166669894411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c24479e001851%3A0xa942a420b8f6738c!2sCarrollton%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                 width="100%"
@@ -124,7 +120,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Footer Bottom */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-slate-500 text-sm font-medium order-2 md:order-1">
             © 2026 Gifted Wheels Driving.

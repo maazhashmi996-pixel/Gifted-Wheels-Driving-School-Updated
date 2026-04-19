@@ -74,7 +74,6 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
               ))}
             </div>
 
-            {/* Support Module */}
             <div className="bg-slate-900 rounded-[3rem] p-10 text-white relative overflow-hidden group">
               <Zap className="absolute -right-4 -top-4 w-32 h-32 text-white/5 -rotate-12" />
 
@@ -110,9 +109,7 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
             </div>
           </div>
 
-          {/* RIGHT SIDE */}
           <div className="lg:col-span-7">
-            {/* ✅ CLICKABLE WRAPPER ADDED ONLY HERE */}
             <a
               href="tel:9726328113"
               className="block relative p-1 rounded-[3.5rem] bg-gradient-to-b from-slate-100 to-white shadow-2xl cursor-pointer"
@@ -133,7 +130,6 @@ const ContactPage = ({ children }: { children?: React.ReactNode }) => {
           </div>
         </div>
 
-        {/* AREA SECTION */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
