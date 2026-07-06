@@ -2,13 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  BookOpen,
-  ExternalLink,
   GraduationCap,
   Car,
   FileCheck,
   Mail,
   Phone,
+  ExternalLink,
 } from "lucide-react";
 
 const OnlineCourses = () => {
@@ -82,33 +81,32 @@ const OnlineCourses = () => {
   ];
 
   return (
-    <section className="py-24 bg-amber-50 min-h-screen relative overflow-hidden">
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-200 rounded-full blur-3xl opacity-40" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-300 rounded-full blur-3xl opacity-30" />
+    <section className="py-24 bg-amber-50/50 min-h-screen relative overflow-hidden">
+      {/* Glow Background Elements */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-200 rounded-full blur-3xl opacity-20" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-300 rounded-full blur-3xl opacity-15" />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header */}
         <div className="text-center mb-20">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-amber-600 font-black uppercase tracking-widest text-sm"
+            className="text-amber-700 font-black uppercase tracking-widest text-xs"
           >
-            Texas Approved Driver Education
+            Texas-approved online driver education powered by Aceable for teens and adults. Learn at your own pace from home.
           </motion.span>
 
           <h1 className="text-5xl md:text-7xl font-black text-slate-900 mt-4 mb-8">
-            Online <span className="text-amber-600">Courses</span>
+            Online <span className="text-amber-700">Courses</span>
           </h1>
 
-          <p className="text-slate-600 max-w-3xl mx-auto font-medium text-lg leading-relaxed">
-            Welcome to our Texas Driver Education programs for teens and adults.
-            Whether you are ready to get your permit or kick off your driving
-            courses, we have teamed up with Aceable to make things super easy
-            for you. Our self-paced online lessons can be done from the comfort
-            of your own home.{" "}
+          <p className="text-slate-700 max-w-3xl mx-auto font-medium text-lg leading-relaxed">
+            Welcome to our Texas Driver Education programs for teens and adults. Whether you are ready to get your permit or kick off your driving courses, we have teamed up with Aceable to make things super easy for you. Our self-paced online lessons can be done from the comfort of your own home.
           </p>
         </div>
 
+        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {data.map((box, i) => (
             <motion.div
@@ -116,9 +114,9 @@ const OnlineCourses = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-10 rounded-[3rem] shadow-xl shadow-amber-100/40 border border-amber-100 flex flex-col group"
+              className="bg-white p-10 rounded-[3rem] shadow-xl shadow-amber-200/20 border border-amber-100 flex flex-col group transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-8 group-hover:bg-amber-600 group-hover:text-white transition-all duration-500">
+              <div className="w-14 h-14 rounded-2xl bg-amber-100 text-slate-900 flex items-center justify-center mb-8 group-hover:bg-amber-600 group-hover:text-white transition-all duration-500">
                 {box.icon}
               </div>
 
@@ -132,7 +130,8 @@ const OnlineCourses = () => {
                     key={j}
                     href={link.url}
                     target="_blank"
-                    className="flex items-center justify-between p-5 rounded-2xl bg-amber-50 border border-transparent hover:border-amber-300 hover:bg-white hover:shadow-lg transition-all group/link font-bold text-slate-700"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-5 rounded-2xl bg-slate-50 border border-transparent hover:border-amber-300 hover:bg-white hover:shadow-lg transition-all group/link font-bold text-slate-900"
                   >
                     <span className="text-sm">{link.label}</span>
                     <ExternalLink className="w-4 h-4 text-amber-500 group-hover/link:text-amber-700 transition-all" />
@@ -143,18 +142,17 @@ const OnlineCourses = () => {
           ))}
         </div>
 
+        {/* Support Section Footer */}
         <div className="mt-20 text-center p-12 rounded-[4rem] bg-slate-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-amber-500/10" />
 
           <div className="relative z-10">
             <h4 className="text-2xl font-black mb-4">
-              Questions? We're Here to Help. Carrollton, Lewisville, Colony,
-              Plano, Frisco
+              Questions? We're Here to Help. Carrollton, Lewisville, Colony, Plano, Frisco
             </h4>
 
             <p className="text-slate-300 mb-8 font-medium italic">
-              Please reach out if you have any questions. Carrollton,
-              Lewisville,Colony, Plano, Frisco
+              Please reach out if you have any questions. Carrollton, Lewisville, Colony, Plano, Frisco
             </p>
 
             <div className="flex flex-col md:flex-row justify-center gap-10">

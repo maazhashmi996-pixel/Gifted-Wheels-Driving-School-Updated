@@ -21,7 +21,7 @@ const slides = [
   },
   {
     id: 3,
-    title: "Ready for Road Test.",
+    title: "Ready for DPS Road Test.",
     description:
       "Learn parallel parking and road safety in our dual-brake vehicles designed for your maximum security.",
     image: "A.jpeg",
@@ -72,9 +72,11 @@ const Hero = () => {
               exit={{ y: -30, opacity: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] text-white uppercase bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                {slides[current].accent}
-              </span>
+              {slides[current].accent && (
+                <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] text-white uppercase bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                  {slides[current].accent}
+                </span>
+              )}
 
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8">
                 {slides[current].title.split(" ").map((word, i) => (
