@@ -30,29 +30,34 @@ const Pricing = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-                    {/* 1 Hour Lesson */}
+                    {/* 1 Hour Lesson - Updated Premium Design */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         whileHover={{ y: -5 }}
-                        className="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.06)] transition-all duration-500 relative overflow-hidden group"
+                        className="bg-gradient-to-b from-white to-slate-50/50 p-10 rounded-[3rem] border border-slate-200/60 shadow-[0_20px_50px_rgba(15,23,42,0.04)] hover:shadow-[0_30px_60px_rgba(234,179,8,0.1)] hover:border-yellow-400/50 transition-all duration-500 relative overflow-hidden group"
                     >
-                        <div className="flex justify-between items-start mb-8">
-                            <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-600 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-500">
+                        <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-8">
+                            <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-700 group-hover:bg-yellow-500 group-hover:text-white group-hover:scale-110 shadow-sm group-hover:shadow-lg group-hover:shadow-yellow-500/20 transition-all duration-500">
                                 <Clock className="w-6 h-6" />
                             </div>
-                            <span className="text-4xl font-black text-slate-900">$55</span>
+                            <div className="sm:text-right max-w-[220px]">
+                                <p className="text-sm font-black text-yellow-600 uppercase tracking-wider mb-1">Custom Pricing</p>
+                                <p className="text-xs font-bold text-slate-500 leading-relaxed">
+                                    Call us today for a personalized quote based on your pick-up location.
+                                </p>
+                            </div>
                         </div>
 
-                        <h3 className="text-2xl font-bold text-slate-900 mb-6">
+                        <h3 className="text-2xl font-bold text-slate-900 mb-6 group-hover:text-yellow-600 transition-colors duration-300">
                             1 Hour Lesson
                         </h3>
 
                         <ul className="space-y-4 mb-10">
                             {["Focused Skill Training", "Dual Brake Safety", "Professional Guidance"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-slate-600 font-medium">
-                                    <CheckCircle2 className="w-5 h-5 text-yellow-500" />
+                                    <CheckCircle2 className="w-5 h-5 text-yellow-500 flex-shrink-0" />
                                     {item}
                                 </li>
                             ))}
