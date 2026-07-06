@@ -34,27 +34,36 @@ const Pricing = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         whileHover={{ y: -5 }}
-                        className="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.06)] transition-all duration-500 relative overflow-hidden group"
+                        className="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.06)] transition-all duration-500 relative overflow-hidden group min-h-[380px] flex flex-col justify-between"
                     >
-                        <div className="flex justify-between items-start mb-8">
-                            <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-600 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-500">
-                                <Clock className="w-6 h-6" />
+                        <div>
+                            <div className="flex justify-between items-start mb-6">
+                                <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-600 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-500">
+                                    <Clock className="w-6 h-6" />
+                                </div>
+                                <div className="text-right max-w-[60%]">
+                                    <span className="text-lg font-bold text-slate-900 block leading-tight">
+                                        Pricing Varies by Location
+                                    </span>
+                                    <span className="text-xs text-slate-500 font-medium block mt-1">
+                                        Call for a personalized quote based on your pick-up area.
+                                    </span>
+                                </div>
                             </div>
-                            <span className="text-4xl font-black text-slate-900">$55</span>
+
+                            <h3 className="text-2xl font-bold text-slate-900 mb-6">
+                                1 Hour Lesson
+                            </h3>
+
+                            <ul className="space-y-4 mb-4">
+                                {["Focused Skill Training", "Dual Brake Safety", "Supportive, Professional Instruction"].map((item, i) => (
+                                    <li key={i} className="flex items-center gap-3 text-slate-600 font-medium">
+                                        <CheckCircle2 className="w-5 h-5 text-yellow-500 shrink-0" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-
-                        <h3 className="text-2xl font-bold text-slate-900 mb-6">
-                            1 Hour Lesson
-                        </h3>
-
-                        <ul className="space-y-4 mb-10">
-                            {["Focused Skill Training", "Dual Brake Safety", "Professional Guidance"].map((item, i) => (
-                                <li key={i} className="flex items-center gap-3 text-slate-600 font-medium">
-                                    <CheckCircle2 className="w-5 h-5 text-yellow-500" />
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
                     </motion.div>
 
                     {/* 2 Hour Lesson */}
@@ -63,34 +72,36 @@ const Pricing = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         whileHover={{ y: -8 }}
-                        className="bg-[#0f172a] p-10 rounded-[3rem] shadow-[0_40px_80px_rgba(15,23,42,0.25)] relative overflow-hidden group border border-slate-800"
+                        className="bg-[#0f172a] p-10 rounded-[3rem] shadow-[0_40px_80px_rgba(15,23,42,0.25)] relative overflow-hidden group border border-slate-800 min-h-[380px] flex flex-col justify-between"
                     >
-                        <div className="absolute top-6 right-8 bg-yellow-500 text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1.5 rounded-full shadow-lg shadow-yellow-500/20">
-                            Best Value
-                        </div>
-
-                        <div className="flex justify-between items-start mb-8">
-                            <div className="w-12 h-12 bg-yellow-500 rounded-2xl flex items-center justify-center text-white">
-                                <Zap className="w-6 h-6" />
+                        <div>
+                            <div className="absolute top-6 right-8 bg-yellow-500 text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1.5 rounded-full shadow-lg shadow-yellow-500/20">
+                                Best Value
                             </div>
-                            <div className="text-right">
-                                <span className="text-4xl font-black text-yellow-500">$100</span>
-                                <p className="text-yellow-400 text-xs font-bold mt-1">SAVE $10</p>
+
+                            <div className="flex justify-between items-start mb-8">
+                                <div className="w-12 h-12 bg-yellow-500 rounded-2xl flex items-center justify-center text-white">
+                                    <Zap className="w-6 h-6" />
+                                </div>
+                                <div className="text-right">
+                                    <span className="text-4xl font-black text-yellow-500">$100</span>
+                                    <p className="text-yellow-400 text-xs font-bold mt-1">SAVE $10</p>
+                                </div>
                             </div>
+
+                            <h3 className="text-2xl font-bold text-white mb-6">
+                                2 Hour Lesson
+                            </h3>
+
+                            <ul className="space-y-4 mb-4">
+                                {["Extended Practice Session", "Deep Confidence-Building", "More time for Real world scenarios"].map((item, i) => (
+                                    <li key={i} className="flex items-center gap-3 text-slate-300 font-medium">
+                                        <CheckCircle2 className="w-5 h-5 text-yellow-400 shrink-0" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-
-                        <h3 className="text-2xl font-bold text-white mb-6">
-                            2 Hour Lesson
-                        </h3>
-
-                        <ul className="space-y-4 mb-10">
-                            {["Extended Practice Session", "Deep Confidence-Building", "More time for Real world scenarios"].map((item, i) => (
-                                <li key={i} className="flex items-center gap-3 text-slate-300 font-medium">
-                                    <CheckCircle2 className="w-5 h-5 text-yellow-400" />
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
                     </motion.div>
                 </div>
 

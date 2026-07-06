@@ -12,8 +12,8 @@ const roadTestData = [
         color: "bg-yellow-50",
     },
     {
-        title: "Driving Road Test",
-        desc: "Perform your official test using our dual-brake vehicles with full support. Fee for teens and adults applies.",
+        title: "Driving Road Test Prep",
+        desc: "Practice road- test maneuvers in our dual-brake vehicle with full support to build confidence for your DPS test.",
         icon: <Road className="w-8 h-8" />,
         color: "bg-slate-100",
         isSpecial: true,
@@ -26,7 +26,7 @@ const roadTestData = [
     },
     {
         title: "Insurance Covered",
-        desc: "All our vehicles are fully insured for testing purposes — so you’re always secure while taking the test.",
+        desc: "Our dual-brake vehicles are fully insured for instructional use, keeping you protected during every practice session, and for your DPS road test. ",
         icon: <ShieldCheck className="w-8 h-8" />,
         color: "bg-slate-200",
     },
