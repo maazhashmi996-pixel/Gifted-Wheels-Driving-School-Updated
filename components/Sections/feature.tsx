@@ -15,7 +15,7 @@ const features = [
     {
         title: "Dual Brake Safety",
         subtitle: "Extra Protection",
-        desc: "Our cars are equipped with dual brakes, ensuring an extra layer of safety and confidence for every learner.",
+        desc: "Our vehicles feature dual-brake systems providing an added layer of safety and reassurance during every lesson.",
         icon: <ShieldCheck className="w-6 h-6" />,
         colSpan: "md:col-span-1"
     },
@@ -105,7 +105,7 @@ const Features = () => {
                     <div className="max-w-xl text-center md:text-left">
                         <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready for your Road Test?</h3>
                         <p className="text-slate-400 font-medium italic">
-                            "Driving lessons designed to build confidence and fully prepare you for your road test, including parallel parking."
+                            "Driving Lessons designed to build confidence and prepare you for your DPS road test- including parallel parking and key test maneuvers."
                         </p>
                     </div>
 

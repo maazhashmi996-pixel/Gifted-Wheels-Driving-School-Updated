@@ -17,7 +17,7 @@ const Services = () => {
     const services = [
         {
             title: "Online Classes for Teens & Adults",
-            desc: "Flexible online classes designed to help teens and adults start their driving journey from the comfort of home.",
+            desc: "Comprehensive behind -the -wheel lessons tailored for all skill levels. We specialize in supporting nervous and anxious drivers, helping you build steady confidence for your DPS road test.",
             img: "/Online.png",
             icon: <GraduationCap className="w-5 h-5" />,
             link: "/services",

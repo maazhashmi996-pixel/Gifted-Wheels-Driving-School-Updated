@@ -82,7 +82,7 @@ const Pricing = () => {
                             </div>
                             <div className="text-right">
                                 <span className="text-4xl font-black text-yellow">$100</span>
-                                <p className="text-yellow-400 text-xs font-bold mt-1">SAVE $10</p>
+                                <p className="text-yellow-400 text-xs font-bold mt-1">(local areas)</p>
                             </div>
                         </div>
 
@@ -91,7 +91,7 @@ const Pricing = () => {
                         </h3>
 
                         <ul className="space-y-4 mb-10">
-                            {["Intensive Practice Session", "Deep Road Confidence", "Extended Distance Options"].map((item, i) => (
+                            {["Extended Practice Session", "Deep Confidence-Building", "More time for Real world scenarios"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-slate-300 font-medium">
                                     <CheckCircle2 className="w-5 h-5 text-yellow-400" />
                                     {item}

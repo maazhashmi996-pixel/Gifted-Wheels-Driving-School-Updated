@@ -19,7 +19,7 @@ const slides = [
     },
     {
         id: 3,
-        title: "Ready for Road Test.",
+        title: "Ready for DPS Road Test.",
         description: "Learn parallel parking and road safety in our dual-brake vehicles designed for your maximum security.",
         image: "A.jpeg",
         accent: "Dual Brake Safety"
