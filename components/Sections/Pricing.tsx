@@ -28,6 +28,7 @@ const Pricing = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    {/* 1 Hour Lesson */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -73,7 +74,7 @@ const Pricing = () => {
                                 <Zap className="w-6 h-6" />
                             </div>
                             <div className="text-right">
-                                <span className="text-4xl font-black text-yellow">$100</span>
+                                <span className="text-4xl font-black text-yellow-500">$100</span>
                                 <p className="text-yellow-400 text-xs font-bold mt-1">SAVE $10</p>
                             </div>
                         </div>
