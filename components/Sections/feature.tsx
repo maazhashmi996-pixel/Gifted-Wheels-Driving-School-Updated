@@ -63,10 +63,8 @@ const Feature = () => {
                     </h2>
                 </motion.div>
 
-                {/* Asymmetric Grid Layout */}
                 <div className="flex flex-col md:flex-row gap-5">
 
-                    {/* Left Column (63% Width) */}
                     <div className="w-full md:w-[63%] flex flex-col gap-5">
                         {featuresData.leftColumn.map((item, index) => (
                             <motion.div
