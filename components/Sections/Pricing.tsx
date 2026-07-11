@@ -85,7 +85,7 @@ const Pricing = () => {
                                 </div>
                                 <div className="text-right">
                                     <span className="text-4xl font-black text-yellow-500">$100</span>
-                                    <p className="text-yellow-400 text-xs font-bold mt-1">SAVE $10</p>
+                                    <p className="text-yellow-400 text-xs font-bold mt-1">Local Areas</p>
                                 </div>
                             </div>
 
