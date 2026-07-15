@@ -93,7 +93,6 @@ const Feature = () => {
                         ))}
                     </div>
 
-                    {/* Right Column (Remaining Width) */}
                     <div className="w-full md:flex-1 flex flex-col gap-5">
                         {featuresData.rightColumn.map((item, index) => (
                             <motion.div
