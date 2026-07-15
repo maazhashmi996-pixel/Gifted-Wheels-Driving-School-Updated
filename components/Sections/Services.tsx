@@ -78,7 +78,6 @@ const Services = () => {
                                 whileHover={{ y: -15 }}
                                 className="group relative h-[550px] rounded-[3rem] overflow-hidden bg-slate-900 shadow-2xl cursor-pointer"
                             >
-                                {/* Image Layer */}
                                 <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110 pointer-events-none">
                                     <img
                                         src={service.img}
