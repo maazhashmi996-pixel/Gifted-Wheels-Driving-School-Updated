@@ -46,7 +46,6 @@ const Services = () => {
         <section id="services" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* Header */}
                 <div className="text-center mb-20">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
