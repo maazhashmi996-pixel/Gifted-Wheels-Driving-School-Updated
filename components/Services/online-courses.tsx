@@ -97,13 +97,19 @@ const OnlineCourses = () => {
                         Texas-approved online driver education powered by Aceable for teens and adults. Learn at your own pace from home.
                     </motion.span>
 
-                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 mt-4 mb-8">
-                        Online <span className="text-amber-700">Courses</span>
+                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 mt-4 mb-8 max-w-2xl mx-auto leading-tight">
+                        Online Driver <br />
+                        <span className="text-amber-700">Education Made Easy</span>
                     </h1>
 
-                    <p className="text-slate-700 max-w-3xl mx-auto font-medium text-lg leading-relaxed">
-                        Explore our Texas-approved online driver education courses tailored for both teens and adults. We’ve partnered with Aceable to provide flexible, self-paced lessons that let you earn your permit or complete your driving education completely from the comfort of home.
-                    </p>
+                    <div className="text-slate-700 max-w-3xl mx-auto font-medium text-lg leading-relaxed space-y-4">
+                        <p>
+                            We partner with Aceable to offer Texas-approved online courses for teens and adults. Complete your lessons from home at your own pace, with clear guidance and a smooth, stress-free experience.
+                        </p>
+                        <p>
+                            When you're ready for behind-the-wheel practice, Gifted Wheels is here with calm, confidence-building instruction.
+                        </p>
+                    </div>
                 </div>
 
                 {/* Cards Grid */}
