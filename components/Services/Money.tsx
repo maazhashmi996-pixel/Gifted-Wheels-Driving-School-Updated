@@ -8,13 +8,15 @@ const Pricing = () => {
     {
       title: "Quick Session",
       duration: "1 hour lesson",
-      price: "55",
+      price: "Pricing Varies by location - Call for a personalized quote based on your pick-up area.",
+      isCustomPrice: true, // Yeh custom flag text size handle karega
       recommended: false,
     },
     {
       title: "Pro Session",
       duration: "2 hour lesson",
       price: "100",
+      isCustomPrice: false,
       recommended: true,
     },
   ];
@@ -48,11 +50,10 @@ const Pricing = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className={`relative p-10 rounded-[3rem] border-2 transition-all duration-500 ${
-                plan.recommended
-                  ? "bg-slate-800 text-white border-slate-800 shadow-[0_30px_60px_-15px_rgba(15,23,42,0.3)]"
-                  : "bg-white text-slate-900 border-slate-100 shadow-xl shadow-slate-200/50"
-              }`}
+              className={`relative p-10 rounded-[3rem] border-2 transition-all duration-500 ${plan.recommended
+                ? "bg-slate-800 text-white border-slate-800 shadow-[0_30px_60px_-15px_rgba(15,23,42,0.3)]"
+                : "bg-white text-slate-900 border-slate-100 shadow-xl shadow-slate-200/50"
+                }`}
             >
               {plan.recommended && (
                 <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-slate-700 text-white px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
@@ -62,49 +63,60 @@ const Pricing = () => {
 
               <div className="flex items-center gap-3 mb-6">
                 <div
-                  className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-                    plan.recommended
-                      ? "bg-slate-700 text-white"
-                      : "bg-slate-100 text-slate-700"
-                  }`}
+                  className={`w-12 h-12 rounded-2xl flex items-center justify-center ${plan.recommended
+                    ? "bg-slate-700 text-white"
+                    : "bg-slate-100 text-slate-700"
+                    }`}
                 >
                   <Clock className="w-6 h-6" />
                 </div>
                 <h3
-                  className={`text-xl font-bold ${
-                    plan.recommended ? "text-slate-200" : "text-slate-600"
-                  }`}
+                  className={`text-xl font-bold ${plan.recommended ? "text-slate-200" : "text-slate-600"
+                    }`}
                 >
                   {plan.title}
                 </h3>
               </div>
 
-              <div className="mb-10">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-5xl md:text-6xl font-black italic">
-                    $
-                  </span>
-                  <span className="text-6xl md:text-7xl font-black tracking-tighter">
-                    {plan.price}
-                  </span>
-                </div>
+              <div className="mb-10 min-h-[140px] flex flex-col justify-center">
+                {plan.isCustomPrice ? (
+                  /* Agar price text format me hai */
+                  <div>
+                    <p className="font-bold text-slate-900 text-lg mb-2">
+                      {plan.duration}
+                    </p>
+                    <p className="text-slate-600 font-semibold text-base leading-relaxed">
+                      {plan.price}
+                    </p>
+                  </div>
+                ) : (
+                  /* Agar numeric price hai tou purana layout */
+                  <>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-5xl md:text-6xl font-black italic">
+                        $
+                      </span>
+                      <span className="text-6xl md:text-7xl font-black tracking-tighter">
+                        {plan.price}
+                      </span>
+                    </div>
 
-                <p
-                  className={`font-bold mt-4 text-lg ${
-                    plan.recommended ? "text-slate-300" : "text-slate-600"
-                  }`}
-                >
-                  {plan.duration} ${plan.price}
-                </p>
+                    <p
+                      className={`font-bold mt-4 text-lg ${plan.recommended ? "text-slate-300" : "text-slate-600"
+                        }`}
+                    >
+                      {plan.duration} - ${plan.price}
+                    </p>
+                  </>
+                )}
               </div>
 
               <a
                 href="#contact"
-                className={`w-full py-5 rounded-2xl font-black text-center flex items-center justify-center gap-3 transition-all duration-300 group ${
-                  plan.recommended
-                    ? "bg-slate-700 hover:bg-slate-600 text-white"
-                    : "bg-slate-900 hover:bg-slate-700 text-white"
-                }`}
+                className={`w-full py-5 rounded-2xl font-black text-center flex items-center justify-center gap-3 transition-all duration-300 group ${plan.recommended
+                  ? "bg-slate-700 hover:bg-slate-600 text-white"
+                  : "bg-slate-900 hover:bg-slate-700 text-white"
+                  }`}
               >
                 Book This Lesson
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

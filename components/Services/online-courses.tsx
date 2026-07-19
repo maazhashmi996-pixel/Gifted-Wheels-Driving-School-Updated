@@ -102,7 +102,7 @@ const OnlineCourses = () => {
                     </h1>
 
                     <p className="text-slate-700 max-w-3xl mx-auto font-medium text-lg leading-relaxed">
-                        Welcome to our Texas Driver Education programs for teens and adults. Whether you are ready to get your permit or kick off your driving courses, we have teamed up with Aceable to make things super easy for you. Our self-paced online lessons can be done from the comfort of your own home.
+                        Explore our Texas-approved online driver education courses tailored for both teens and adults. We’ve partnered with Aceable to provide flexible, self-paced lessons that let you earn your permit or complete your driving education completely from the comfort of home.
                     </p>
                 </div>
 

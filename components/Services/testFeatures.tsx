@@ -28,8 +28,8 @@ const RoadTest = () => {
       bgColor: "bg-slate-100",
     },
     {
-      title: "Official Road Test",
-      desc: "Perform your official test using our dual-brake vehicles with full support. Fees for teens and adults are competitive.",
+      title: "DPS Road Test Preparation",
+      desc: "We prepare you for the official DPS road test during lessons, ensuring you master every step with confidence.",
       icon: <Car className="w-8 h-8" />,
       color: "text-slate-700",
       bgColor: "bg-slate-100",
