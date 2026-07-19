@@ -80,7 +80,6 @@ const Pricing = () => {
 
               <div className="mb-10 min-h-[140px] flex flex-col justify-center">
                 {plan.isCustomPrice ? (
-                  /* Agar price text format me hai */
                   <div>
                     <p className="font-bold text-slate-900 text-lg mb-2">
                       {plan.duration}
