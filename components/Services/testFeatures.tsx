@@ -86,8 +86,7 @@ const RoadTest = () => {
             whileInView={{ opacity: 1 }}
             className="text-slate-500 font-medium text-lg max-w-sm border-l-4 border-slate-200 pl-6"
           >
-            We prepare you for the official road test during lessons, ensuring
-            you master every step with confidence.
+
           </motion.p>
         </div>
 
