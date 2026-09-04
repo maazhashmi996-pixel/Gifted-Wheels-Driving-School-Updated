@@ -18,11 +18,11 @@ const OnlineCourses = () => {
             links: [
                 {
                     label: "Instructor Led (AMI)",
-                    url: "http://go.aceable.com/aff_c?offer_id=14&aff_id=2690",
+                    url: "https://getdriversed.com/courses-details/texas-teen-drivers-ed-course-instructor-taught?token=8td1hz1uc7akyj7x6S8R3NC0gsleT0vArKi675qGFD01LJ9bBQ8IOfMmnP2pHwE9o46",
                 },
                 {
                     label: "Parent Taught Drivers Ed",
-                    url: "http://go.aceable.com/aff_c?offer_id=17&aff_id=2690",
+                    url: "https://getdriversed.com/courses-details/texas-teen-drivers-ed-course-parent-taught?token=yzeb2MI8A1Kplmk70L3d4SgH8Jqh5st0roO6PED9CvniujN397GB7a0w1cFQfT6R16x",
                 },
                 {
                     label: "Teens (ITTD) Impact Videos",
@@ -40,7 +40,7 @@ const OnlineCourses = () => {
             links: [
                 {
                     label: "6-Hour Adult Course for Permit",
-                    url: "http://go.aceable.com/aff_c?offer_id=12&aff_id=2690",
+                    url: "https://getdriversed.com/courses-details/adult-drivers-ed-texas?token=y84HDOtsbiLM3Q7wGRcn93ev7N0xpm87JTuP06Kh0Sd5q1k1l762Fg9Eaj1ICBrAofz",
                 },
                 {
                     label: "Adults (ITYD) Impact Videos",
@@ -48,7 +48,7 @@ const OnlineCourses = () => {
                 },
                 {
                     label: "Defensive Driving",
-                    url: "http://go.aceable.com/aff_c?offer_id=15&aff_id=2690",
+                    url: "https://getdriversed.com/courses-details/adult-drivers-ed-texas?token=y84HDOtsbiLM3Q7wGRcn93ev7N0xpm87JTuP06Kh0Sd5q1k1l762Fg9Eaj1ICBrAofz",
                 },
             ],
         },
@@ -94,7 +94,7 @@ const OnlineCourses = () => {
                         animate={{ opacity: 1 }}
                         className="text-amber-700 font-black uppercase tracking-widest text-xs"
                     >
-                        Texas-approved online driver education powered by Aceable for teens and adults. Learn at your own pace from home.
+                        Texas-approved online driver education powered by Get Drivers Ed for teens and adults. Learn at your own pace from home.
                     </motion.span>
 
                     <h1 className="text-5xl md:text-7xl font-black text-slate-900 mt-4 mb-8 max-w-2xl mx-auto leading-tight">
@@ -104,7 +104,7 @@ const OnlineCourses = () => {
 
                     <div className="text-slate-700 max-w-3xl mx-auto font-medium text-lg leading-relaxed space-y-4">
                         <p>
-                            We partner with Aceable to offer Texas-approved online courses for teens and adults. Complete your lessons from home at your own pace, with clear guidance and a smooth, stress-free experience.
+                            We partner with Get Drivers Ed to offer Texas-approved online courses for teens and adults. Complete your lessons from home at your own pace, with clear guidance and a smooth, stress-free experience.
                         </p>
                         <p>
                             When you're ready for behind-the-wheel practice, Gifted Wheels is here with calm, confidence-building instruction.
