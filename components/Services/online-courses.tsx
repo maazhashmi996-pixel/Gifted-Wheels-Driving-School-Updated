@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
     GraduationCap,
@@ -81,28 +82,44 @@ const OnlineCourses = () => {
     ];
 
     return (
-        <section className="py-24 bg-amber-50/50 min-h-screen relative overflow-hidden">
+        <section id="online-classes" className="py-24 bg-amber-50/50 min-h-screen relative overflow-hidden">
             {/* Glow Background Elements */}
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-200 rounded-full blur-3xl opacity-20" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-300 rounded-full blur-3xl opacity-15" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                {/* Header */}
-                <div className="text-center mb-20">
+                {/* Header Container Centered */}
+                <div className="flex flex-col items-center text-center mb-20 max-w-4xl mx-auto">
+                    {/* Centered Logo above top text */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="mb-6 flex justify-center items-center"
+                    >
+                        <Image
+                            src="/fff.png"
+                            alt="Get Drivers Ed Logo"
+                            width={180}
+                            height={180}
+                            className="object-contain"
+                            priority
+                        />
+                    </motion.div>
+
                     <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="text-amber-700 font-black uppercase tracking-widest text-xs"
+                        className="text-amber-700 font-black uppercase tracking-widest text-xs text-center block mb-4 max-w-2xl mx-auto"
                     >
-                        Texas-approved online driver education powered by Get Drivers Ed for teens and adults. Learn at your own pace from home.
+                        TEXAS-APPROVED ONLINE DRIVER EDUCATION POWERED BY ACEABLE FOR TEENS AND ADULTS. LEARN AT YOUR OWN PACE FROM HOME.
                     </motion.span>
 
-                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 mt-4 mb-8 max-w-2xl mx-auto leading-tight">
+                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 max-w-2xl text-center leading-tight">
                         Online Driver <br />
                         <span className="text-amber-700">Education Made Easy</span>
                     </h1>
 
-                    <div className="text-slate-700 max-w-3xl mx-auto font-medium text-lg leading-relaxed space-y-4">
+                    <div className="text-slate-700 max-w-3xl font-medium text-lg leading-relaxed space-y-4 text-center">
                         <p>
                             We partner with Get Drivers Ed to offer Texas-approved online courses for teens and adults. Complete your lessons from home at your own pace, with clear guidance and a smooth, stress-free experience.
                         </p>
