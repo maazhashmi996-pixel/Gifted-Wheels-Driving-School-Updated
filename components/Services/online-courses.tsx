@@ -49,7 +49,7 @@ const OnlineCourses = () => {
                 },
                 {
                     label: "Defensive Driving",
-                    url: "https://getdriversed.com/courses-details/adult-drivers-ed-texas?token=y84HDOtsbiLM3Q7wGRcn93ev7N0xpm87JTuP06Kh0Sd5q1k1l762Fg9Eaj1ICBrAofz",
+                    url: "https://getdriversed.com/courses-details/texas-online-defensive-driving-course/en?token=7eug7oTi1q429B0KMDN6J876lEny701CLI9bF5f9RSktxzAQwmvd1pG08P3rjsaHcOh",
                 },
             ],
         },
@@ -111,7 +111,7 @@ const OnlineCourses = () => {
                         animate={{ opacity: 1 }}
                         className="text-amber-700 font-black uppercase tracking-widest text-xs text-center block mb-4 max-w-2xl mx-auto"
                     >
-                        TEXAS-APPROVED ONLINE DRIVER EDUCATION POWERED BY ACEABLE FOR TEENS AND ADULTS. LEARN AT YOUR OWN PACE FROM HOME.
+                        TEXAS-APPROVED ONLINE DRIVER EDUCATION FOR TEENS AND ADULTS. LEARN AT YOUR OWN PACE FROM HOME.
                     </motion.span>
 
                     <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 max-w-2xl text-center leading-tight">

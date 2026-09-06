@@ -16,30 +16,29 @@ const Services = () => {
 
     const services = [
         {
-            title: "Online Classes for Teens & Adults",
-            desc: "Online classes for Teens and Adults for permits and to get ready for behind the wheel classes.....",
+            title: "Online Driver Education",
+            desc: "Teen & Adults Welconme Earn Your Permit Online & Build the Skills You Need Before Behind-the-Wheel Training.",
             img: "/Online.png",
             icon: <GraduationCap className="w-5 h-5" />,
             link: "/services#online-classes",
             status: "active"
         },
         {
-            title: "Driving Lessons: Adult & Teen",
-            desc: "Learn to drive and build confidence in a safe, supportive environment, getting you ready for your road test.",
+            title: "Driving Lessons for Teens & Adults",
+            desc: "Patient instruction. Real-world skills. Confidence behind the wheel.",
             img: "/Driving Lessons Adult and Teen.jpeg",
             icon: <GraduationCap className="w-5 h-5" />,
             link: "/services",
             status: "active"
         },
         {
-            title: "Driving Test Prep: Adult & Teen",
-            desc: "Prepare for your driving test with structured lessons and expert guidance to pass with confidence.",
+            title: "Road-Ready For Test Day",
+            desc: "Practice the skills examiners look for with structured lessons and expert guidance to help you feel prepared and confident.",
             img: "/Driving Test Prep Adult and Teen.webp",
             icon: <ClipboardCheck className="w-5 h-5" />,
             link: "/services",
             status: "active"
         },
-
     ];
 
     return (
