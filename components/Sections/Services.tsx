@@ -47,13 +47,15 @@ const Services = () => {
             status: "active"
         },
         {
-            title: "Driving Lessons for Teens & Adults",
+            title: "NERVOUS TO ROAD-READY",
+            subtitle: "Driving Lessons for Teens & Adults",
             desc: "Patient instruction. Real-world skills. Confidence behind the wheel.",
             img: "/Driving Lessons Adult and Teen.jpeg",
             icon: <GraduationCap className="w-5 h-5" />,
             buttonText: "Book Now",
+            phone: "+1 000 000 0000", // 👈 YAHAN CLIENT KA REAL PHONE NUMBER
             status: "active",
-            isModalTrigger: true // Marks 2nd card to open form modal
+            isModalTrigger: true
         },
         {
             title: "Road-Ready For Test Day",
@@ -129,16 +131,37 @@ const Services = () => {
                                         {service.title}
                                     </h3>
 
+                                    {service.subtitle && (
+                                        <h4 className="text-lg font-bold text-yellow-400 mt-2 leading-tight">
+                                            {service.subtitle}
+                                        </h4>
+                                    )}
+
                                     <p className="text-slate-200 font-medium mb-8 line-clamp-3 group-hover:text-white transition-colors">
                                         {service.desc}
                                     </p>
 
                                     {service.status !== 'upcoming' && (
-                                        <div className="inline-flex items-center gap-3 text-yellow-400 font-black uppercase tracking-widest text-sm group/btn">
-                                            {service.buttonText}
-                                            <div className="w-10 h-10 rounded-full border border-yellow-400/30 flex items-center justify-center group-hover/btn:bg-yellow-600 group-hover/btn:border-yellow-600 transition-all">
-                                                <ArrowRight className="w-5 h-5 text-white" />
+                                        <div className="flex items-center gap-5 flex-wrap">
+                                            {/* Book Now */}
+                                            <div className="inline-flex items-center gap-3 text-yellow-400 font-black uppercase tracking-widest text-sm group/btn">
+                                                {service.buttonText}
+
+                                                <div className="w-10 h-10 rounded-full border border-yellow-400/30 flex items-center justify-center group-hover/btn:bg-yellow-600 group-hover/btn:border-yellow-600 transition-all">
+                                                    <ArrowRight className="w-5 h-5 text-white" />
+                                                </div>
                                             </div>
+
+                                            {service.phone && (
+                                                <a
+                                                    href={`tel:${service.phone}`}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                    className="inline-flex items-center gap-2 text-white font-bold text-sm hover:text-yellow-400 transition-colors"
+                                                >
+                                                    <Phone className="w-5 h-5 text-yellow-400" />
+                                                    <span>{service.phone}</span>
+                                                </a>
+                                            )}
                                         </div>
                                     )}
                                 </div>
