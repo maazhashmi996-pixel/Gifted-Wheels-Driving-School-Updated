@@ -53,7 +53,6 @@ const Services = () => {
             img: "/Driving Lessons Adult and Teen.jpeg",
             icon: <GraduationCap className="w-5 h-5" />,
             buttonText: "Book Now",
-            phone: "+1 000 000 0000", // 👈 YAHAN CLIENT KA REAL PHONE NUMBER
             status: "active",
             isModalTrigger: true
         },
@@ -152,16 +151,6 @@ const Services = () => {
                                                 </div>
                                             </div>
 
-                                            {service.phone && (
-                                                <a
-                                                    href={`tel:${service.phone}`}
-                                                    onClick={(e) => e.stopPropagation()}
-                                                    className="inline-flex items-center gap-2 text-white font-bold text-sm hover:text-yellow-400 transition-colors"
-                                                >
-                                                    <Phone className="w-5 h-5 text-yellow-400" />
-                                                    <span>{service.phone}</span>
-                                                </a>
-                                            )}
                                         </div>
                                     )}
                                 </div>
@@ -185,7 +174,7 @@ const Services = () => {
                 </div>
             </div>
 
-            {/* Modal Popup for Card 2 */}
+            {/* Modal Popup for Card 2 & 3 */}
             <AnimatePresence>
                 {isModalOpen && (
                     <motion.div
@@ -205,15 +194,27 @@ const Services = () => {
                             {/* Close Button */}
                             <button
                                 onClick={() => setIsModalOpen(false)}
-                                className="absolute top-6 right-6 w-10 h-10 bg-slate-100 text-slate-600 hover:bg-yellow-500 hover:text-white rounded-full flex items-center justify-center transition-all"
+                                className="absolute top-6 right-6 w-10 h-10 bg-slate-100 text-slate-600 hover:bg-yellow-500 hover:text-white rounded-full flex items-center justify-center transition-all z-10"
                             >
                                 <X className="w-5 h-5" />
                             </button>
 
-                            <div className="mb-6">
-                                <h3 className="text-3xl font-black text-slate-900 mb-2">
-                                    Book Your <span className="text-yellow-500">Lesson</span>
-                                </h3>
+                            <div className="mb-6 pr-12">
+                                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                    <h3 className="text-3xl font-black text-slate-900">
+                                        Book Your <span className="text-yellow-500">Lesson</span>
+                                    </h3>
+
+                                    {/* Direct Dialing Link */}
+                                    <a
+                                        href="tel:9726328113"
+                                        className="inline-flex items-center gap-1.5 text-sm font-black text-slate-700 hover:text-yellow-600 transition-colors bg-slate-100 hover:bg-yellow-50 px-3 py-1.5 rounded-xl border border-slate-200"
+                                    >
+                                        <Phone className="w-3.5 h-3.5 text-yellow-600" />
+                                        972-632-8113
+                                    </a>
+                                </div>
+
                                 <p className="text-sm text-slate-600 font-medium">
                                     Fill in the details below to schedule your driving lesson with us.
                                 </p>
@@ -278,4 +279,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default Services;    
