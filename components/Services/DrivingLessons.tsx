@@ -125,7 +125,7 @@ const DrivingLessons = () => {
                 <div className="space-y-3 text-slate-200 font-medium">
                   <p className="leading-relaxed">
                     Free service within Carrollton, Plano, Frisco, The Colony
-                    for both 1-hour and 2-hour classes.
+                    for 2-hour classes.
                   </p>
                   <p className="text-sm bg-white/10 p-3 rounded-xl border border-white/10">
                     For other areas please contact us.

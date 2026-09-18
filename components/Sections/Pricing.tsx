@@ -41,8 +41,12 @@ const Pricing = () => {
                                     <Clock className="w-6 h-6" />
                                 </div>
                                 <div className="text-right">
-                                    <span className="text-3xl font-black text-slate-900">$55</span>
-                                    <p className="text-slate-500 text-[10px] font-bold mt-0.5">1 Hour Total</p>
+                                    <h4 className="text-lg font-bold text-slate-900 leading-tight">
+                                        Pricing Varies by Location
+                                    </h4>
+                                    <p className="text-slate-500 text-xs mt-1">
+                                        Call for a personalized quote based on your pick-up area.
+                                    </p>
                                 </div>
                             </div>
 
